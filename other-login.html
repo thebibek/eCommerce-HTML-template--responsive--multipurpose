@@ -1,0 +1,119 @@
+<!doctype html>
+<!--[if IE 9]>
+<html class="ie9 no-js supports-no-cookies" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js supports-no-cookies" lang="en"> <!--<![endif]-->
+<head>
+    //= template/head.html
+</head>
+<body id="account" class="template-login theme-css-animate" data-currency-multiple="true">
+//= template/header.html
+<main id="MainContent">
+    <div class="breadcrumbs mt-15">
+        <div class="container">
+            <ul class="list-unstyled d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <li><a href="index.html">Home</a></li>
+                <li><span>Account</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="login mb-60">
+        <div class="container">
+            <div id="CustomerLoginForm">
+                <h1 class="h3 mt-30 mb-40 text-center">Login</h1>
+                <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8"><input
+                        type="hidden" name="form_type" value="customer_login"/><input type="hidden" name="utf8"
+                                                                                      value="✓"/>
+                    <label for="CustomerEmail" class="label-required">EMAIL</label>
+                    <input type="email"
+                           name="customer[email]"
+                           id="CustomerEmail"
+                           class=""
+                           placeholder="Enter your email"
+                           spellcheck="false"
+                           autocomplete="off"
+                           autocapitalize="off"
+                           required="required"
+                           autofocus><label for="CustomerPassword" class="label-required">PASSWORD</label>
+                    <input type="password"
+                           name="customer[password]"
+                           id="CustomerPassword"
+                           class=""
+                           placeholder="Enter your password"
+                           required="required">
+                    <div class="text-center">
+                        <input type="submit" class="btn btn--full btn--secondary" value="LOGIN">
+                        <div>
+                            <a href="https://shella-demo.myshopify.com" class="h6 btn-link mt-20 mb-0">RETURN TO
+                                STORE</a>
+                        </div>
+                        <div>
+                            <a href="#recover" class="btn-link mt-15 js-button-block-visibility"
+                               data-block-link="#recover">Forgot Your Password?</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <form method="post" action="/account/recover" accept-charset="UTF-8"><input type="hidden" name="form_type"
+                                                                                        value="recover_customer_password"/><input
+                    type="hidden" name="utf8" value="✓"/>
+                <div id="RecoverPasswordForm" class="pt-35 mt-35 border-top d-none-important"
+                     data-block-visibility="#recover">
+                    <h2 class="h3 text-center">Reset your password</h2>
+                    <p>We will send you an email to reset your password.</p><label for="RecoverEmail"
+                                                                                   class="label-required">EMAIL</label>
+                    <input type="email"
+                           name="email"
+                           id="RecoverEmail"
+                           placeholder="Enter your email"
+                           spellcheck="false"
+                           autocomplete="off"
+                           autocapitalize="off"
+                           required="required"
+                           data-block-visibility-focus>
+
+                    <input type="submit" class="btn btn--full" value="Submit">
+                    <div class="mt-15 text-center">
+                        <span class="btn-link js-button-block-visibility" data-action="close"
+                              data-block-link="#recover">Close</span>
+                    </div>
+                </div>
+            </form>
+            <div class="pt-35 mt-35 border-top">
+                <h2 class="h3 text-center">Sign Up</h2>
+                <div class="mb-35">
+                    <p class="h6 mb-15">Enjoy The Benefits Of Registering:</p>
+                    <ul class="mb-0">
+                        <li>Order: view Order History, track and manage purchases and returns.</li>
+                        <li>Address Book and Card Wallet: safely store delivery and payment details for faster
+                            checkout
+                        </li>
+                        <li>Saved for later: wish list your preferred items and track their availability</li>
+                    </ul>
+                </div>
+                <a href="/account/register" class="btn btn--full">SIGN UP NOW!</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        Loader.require({
+            type: "script",
+            name: "buttons_blocks_visibility"
+        });
+
+        Loader.require({
+            type: "script",
+            name: "customers_login"
+        });
+    </script>
+
+</main>
+//= template/footer.html
+//= template/popups.html
+//= template/footbar.html
+//= template/fixed-sidebar.html
+//= template/templates.html
+//= template/footer-includes.html
+</body>
+</html>

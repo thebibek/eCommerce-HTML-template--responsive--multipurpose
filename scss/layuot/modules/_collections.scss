@@ -1,0 +1,16 @@
+.collections {
+  @include screen-up(lg) {
+    margin-bottom: 25px;
+  }
+  &__sidebar {
+    z-index: 1;
+    @include screen-up(lg) {
+      margin-top: -19px;
+    }
+  }
+}
+.collections__sidebar--width-md {
+  @include screen-up(lg) {
+    width: 300px;
+  }
+}

@@ -1,0 +1,11 @@
+.dynamic-checkout {
+  &__button {
+    &.disabled .shopify-payment-button__button {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+    [aria-hidden="true"] {
+      display: none;
+    }
+  }
+}

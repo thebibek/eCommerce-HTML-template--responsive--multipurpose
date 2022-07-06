@@ -1,0 +1,26 @@
+.form-input-button {
+  &--type-01 {
+    *:first-child {
+      @include screen-up(lg) {
+        width: calc(65% - 10px);
+      }
+    }
+    *:last-child {
+      @include screen-up(lg) {
+        width: 35%;
+      }
+    }
+  }
+  &--type-02 {
+    *:first-child {
+      @include screen-up(lg) {
+        width: calc(55% - 10px);
+      }
+    }
+    *:last-child {
+      @include screen-up(lg) {
+        width: 45%;
+      }
+    }
+  }
+}

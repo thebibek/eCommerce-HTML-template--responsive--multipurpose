@@ -1,0 +1,13 @@
+.product-images-navigation span {
+  @include size(35px);
+  will-change: background-color;
+  transition-property: background-color;
+  &[data-disabled] {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  i {
+    will-change: color;
+    transition-property: color;
+  }
+}

@@ -1,0 +1,11 @@
+.shopify-challenge__container {
+  @include screen-up(md) {
+    margin: 200px auto !important;
+  }
+  @include screen-down(md) {
+    margin: 140px auto !important;
+  }
+}
+.g-recaptcha {
+  margin: 20px 0 !important;
+}

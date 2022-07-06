@@ -1,0 +1,251 @@
+.btn,
+.spr-summary-actions-newreview,
+.spr-button {
+  display: inline-flex;
+  @include flex-center();
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  @include screen-up(lg) {
+    min-height: 35px;
+    padding: 0 16px;
+  }
+  @include screen-down(lg) {
+    min-height: 50px;
+    padding: 0 10px;
+  }
+  &[disabled],
+  &[data-disabled],
+  &.disabled,
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+}
+.spr-button {
+  box-shadow: none !important;
+  @include screen-up(lg) {
+    min-height: 35px !important;
+  }
+  @include screen-down(lg) {
+    min-height: 50px !important;
+  }
+}
+.shopify-payment-button__button {
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.7 !important;
+  }
+}
+.dynamic-checkout__button--styled .shopify-payment-button__button {
+  display: inline-flex !important;
+  @include flex-center(!important);
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-transform: uppercase;
+  border: 1px solid transparent !important;
+  outline: none !important;
+  @include screen-up(lg) {
+    min-height: 35px !important;
+  }
+  @include screen-down(lg) {
+    min-height: 50px !important;
+  }
+  &.shopify-payment-button__button--unbranded,
+  &.shopify-payment-button__button--branded .shopify-cleanslate div[role="button"] {
+    @include screen-up(lg) {
+      padding: 0 16px !important;
+    }
+    @include screen-down(lg) {
+      padding: 0 10px !important;
+    }
+  }
+  .shopify-cleanslate {
+    width: 100% !important;
+  }
+  .shopify-cleanslate div[role="button"] {
+    min-height: initial !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .checkoutLight {
+    min-height: initial !important;
+    height: 35px !important;
+  }
+}
+.shopify-payment-button__more-options {
+  outline: none !important;
+}
+.btn,
+.btn-link {
+  &,
+  span {
+    white-space: normal;
+  }
+}
+.btn-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.btn,
+.btn-link,
+.spr-summary-actions-newreview {
+  will-change: background-color, border-color, color;
+}
+.btn .icon {
+  transition-property: fill;
+  will-change: fill;
+}
+a:hover, a:visited, a:active, a:link {
+  &.btn-link {
+    text-decoration: underline;
+  }
+}
+.btn--animated {
+  overflow: hidden;
+  .btn {
+    &__text {
+      @include screen-up(lg) {
+        transition-property: transform, color;
+        will-change: transform, color;
+      }
+    }
+    &__icon {
+      @include screen-up(lg) {
+        transition-property: transform;
+        will-change: transform;
+      }
+    }
+    &__icon {
+      @include screen-up(lg) {
+        transform: translate3d(-40px, 45px, 0);
+      }
+    }
+    &__text {
+      @include screen-up(lg) {
+        transform: translate3d(-12px, 0, 0);
+      }
+    }
+  }
+  &:hover {
+    .btn {
+      &__icon,
+      &__text {
+        @include screen-up(lg) {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    }
+  }
+}
+.btn--status {
+  &:not([data-button-status='added']) [data-button-content='added'],
+  &:not([data-button-status='sold-out']) [data-button-content='sold-out'] {
+    display: none !important;
+  }
+  &[data-button-status='added'] > *:not([data-button-content='added']) {
+    display: none !important;
+  }
+  &[data-button-status='sold-out'] > *:not([data-button-content='sold-out']) {
+    display: none !important;
+  }
+}
+.is-edge .btn--status[data-button-status='added'] > [data-button-content='added'] i {
+  margin-bottom: 0 !important;
+}
+html:not([dir='rtl']) {
+  .buttons-group-grid-px-5 {
+    & > *:not(:first-child) {
+      @include screen-up(md) {
+        padding-left: 5px;
+      }
+    }
+    & > *:not(:last-child) {
+      @include screen-up(md) {
+        padding-right: 5px;
+      }
+    }
+  }
+}
+[dir='rtl'] {
+  .buttons-group-grid-px-5 {
+    & > *:not(:first-child) {
+      @include screen-up(md) {
+        padding-right: 5px;
+      }
+    }
+    & > *:not(:last-child) {
+      @include screen-up(md) {
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+.shopify-payment-button__button--hidden {
+  visibility: hidden;
+}
+
+.shopify-payment-button__button {
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 0 0 transparent;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  width: 100%;
+  transition: background 0.2s ease-in-out;
+}
+
+.shopify-payment-button__button[disabled] {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.shopify-payment-button__button--unbranded {
+  background-color: #1990c6;
+  padding: 1em 2em;
+}
+
+.shopify-payment-button__button--unbranded:hover:not([disabled]) {
+  background-color: #136f99;
+}
+
+.shopify-payment-button__more-options {
+  background: transparent;
+  border: 0 none;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  margin-top: 1em;
+  text-align: center;
+  width: 100%;
+}
+
+.shopify-payment-button__more-options:hover:not([disabled]) {
+  text-decoration: underline;
+}
+
+.shopify-payment-button__more-options[disabled] {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.shopify-payment-button__button--branded {
+  display: flex;
+  flex-direction: column;
+  min-height: 44px;
+  position: relative;
+  z-index: 1;
+}
+
+.shopify-payment-button__button--branded .shopify-cleanslate {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}

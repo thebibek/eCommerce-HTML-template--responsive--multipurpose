@@ -1,0 +1,8 @@
+.footbar {
+  @include screen-up(lg) {
+    z-index: 3;
+  }
+  @include screen-down(lg) {
+    z-index: 2;
+  }
+}

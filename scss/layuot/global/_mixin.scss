@@ -1,0 +1,66 @@
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  // sass-lint:disable
+  *zoom: 1;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex-center($imp: null) {
+  justify-content: center $imp;
+  align-items: center $imp;
+}
+
+@mixin stretch-block($imp: null) {
+  position: absolute $imp;
+  top: 0 $imp;
+  bottom: 0 $imp;
+  left: 0 $imp;
+  right: 0 $imp;
+}
+
+@mixin list-unstyled {
+  padding-left: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+}
+
+@mixin screen-up($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin screen-down($breakpoint) {
+  @media (max-width: (map-get($breakpoints, $breakpoint) - 1)) {
+    @content;
+  }
+}
+
+@mixin screen-between($lower, $upper) {
+  @media (min-width: map-get($breakpoints, $lower)) and (max-width: (map-get($breakpoints, $upper) - 1)) {
+    @content;
+  }
+}
+
+//builder
+@mixin prop-media-build($prop, $value, $name, $name-value) {
+  .#{$name}-#{$name-value} {
+    #{$prop}: #{$value} !important;
+  }
+  @each $breakpoint in map-keys($breakpoints) {
+    .#{$name}-#{$breakpoint}-#{$name-value} {
+      @include screen-up($breakpoint) {
+        #{$prop}: #{$value} !important;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,129 @@
+.image-animation {
+  @include screen-up(lg) {
+    overflow: hidden;
+  }
+  .theme-css-animate & > * {
+    @include screen-up(lg) {
+      transition-property: transform;
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+  }
+  .theme-css-animate &--from-opacity,
+  .theme-css-animate &--to-opacity {
+    & > * {
+      @include screen-up(lg) {
+        transition-property: opacity, transform;
+        will-change: opacity, transform;
+      }
+    }
+  }
+  .theme-css-animate &--from-opacity:hover,
+  .theme-css-animate &-trigger:hover &--from-opacity {
+    & > * {
+      @include screen-up(lg) {
+        opacity: 1;
+      }
+    }
+  }
+  .theme-css-animate &--from-opacity,
+  .theme-css-animate &--to-opacity:hover,
+  .theme-css-animate &-trigger:hover &--to-opacity {
+    & > * {
+      @include screen-up(lg) {
+        opacity: 0.4;
+      }
+    }
+  }
+  .theme-css-animate &--from-default,
+  .theme-css-animate &--to-default:hover,
+  .theme-css-animate &-trigger:hover &--to-default {
+    & > * {
+      @include screen-up(lg) {
+        transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+      }
+    }
+  }
+  //scales
+  .theme-css-animate &--from-center,
+  .theme-css-animate &--to-center:hover,
+  .theme-css-animate &-trigger:hover &--to-center {
+    & > * {
+      @include screen-up(lg) {
+        transform: scale3d(1.1, 1.1, 1) translate3d(0, 0, 0);
+      }
+    }
+  }
+  .theme-css-animate &--from-top-left,
+  .theme-css-animate &--to-top-left:hover,
+  .theme-css-animate &-trigger:hover &--to-top-left {
+    & > * {
+      @include screen-up(lg) {
+        transform: scale3d(1.1, 1.1, 1) translate3d(-4%, -4%, 0);
+      }
+    }
+  }
+  .theme-css-animate &--from-top,
+  .theme-css-animate &--to-top:hover,
+  .theme-css-animate &-trigger:hover &--to-top {
+    & > * {
+      @include screen-up(lg) {
+        transform: scale3d(1.1, 1.1, 1) translate3d(0, -4%, 0);
+      }
+    }
+  }
+  .theme-css-animate &--from-top-right,
+  .theme-css-animate &--to-top-right:hover,
+  .theme-css-animate &-trigger:hover &--to-top-right {
+    & > * {
+      @include screen-up(lg) {
+        transform: scale3d(1.1, 1.1, 1) translate3d(4%, -4%, 0);
+      }
+    }
+  }
+  .theme-css-animate &--from-right,
+  .theme-css-animate &--to-right:hover,
+  .theme-css-animate &-trigger:hover &--to-right {
+    & > * {
+      @include screen-up(lg) {
+        transform: scale3d(1.1, 1.1, 1) translate3d(4%, 0, 0);
+      }
+    }
+  }
+  .theme-css-animate &--from-bottom-right,
+  .theme-css-animate &--to-bottom-right:hover,
+  .theme-css-animate &-trigger:hover &--to-bottom-right {
+    & > * {
+      @include screen-up(lg) {
+        transform: scale3d(1.1, 1.1, 1) translate3d(4%, 4%, 0);
+      }
+    }
+  }
+  .theme-css-animate &--from-bottom,
+  .theme-css-animate &--to-bottom:hover,
+  .theme-css-animate &-trigger:hover &--to-bottom {
+    & > * {
+      @include screen-up(lg) {
+        transform: scale3d(1.1, 1.1, 1) translate3d(0, 4%, 0);
+      }
+    }
+  }
+  .theme-css-animate &--from-bottom-left,
+  .theme-css-animate &--to-bottom-left:hover,
+  .theme-css-animate &-trigger:hover &--to-bottom-left {
+    & > * {
+      @include screen-up(lg) {
+        transform: scale3d(1.1, 1.1, 1) translate3d(-4%, 4%, 0);
+      }
+    }
+  }
+  .theme-css-animate &--from-left,
+  .theme-css-animate &--to-left:hover,
+  .theme-css-animate &-trigger:hover &--to-left {
+    & > * {
+      @include screen-up(lg) {
+        transform: scale3d(1.1, 1.1, 1) translate3d(-4%, 0, 0);
+      }
+    }
+  }
+}

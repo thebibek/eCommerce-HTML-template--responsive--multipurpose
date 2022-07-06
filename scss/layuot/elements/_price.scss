@@ -1,0 +1,12 @@
+.price {
+  display: inline-block;
+  &--sale > span:first-child {
+    text-decoration: line-through;
+  }
+  &--sale > span:not(:first-child) {
+    &::before {
+      display: inline-block;
+      content: '\00a0';
+    }
+  }
+}

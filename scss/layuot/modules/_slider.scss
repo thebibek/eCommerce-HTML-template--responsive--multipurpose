@@ -1,0 +1,45 @@
+.slider {
+  &__prev,
+  &__next {
+    top: 50%;
+    margin-top: -20px;
+    z-index: 1;
+  }
+  &__prev {
+    left: 30px;
+  }
+  &__next {
+    right: 30px;
+  }
+  .slick-slide {
+    outline: none;
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-bottom: 50px;
+    transform: translate3d(-50%, 0, 0);
+    li {
+      @include size(6px);
+      min-width: 6px;
+      padding: 0;
+      margin-left: 12px;
+      margin-right: 12px;
+      margin-bottom: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      &::before {
+        display: none;
+      }
+      &.slick-active {
+        @include size(10px);
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+    button {
+      display: none;
+    }
+  }
+}

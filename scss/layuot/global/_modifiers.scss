@@ -1,0 +1,106 @@
+//cursor
+$cursors: pointer, default;
+@each $cursor in $cursors {
+  @include prop-media-build(cursor, $cursor, cursor, $cursor);
+}
+.cursor-pointer[disabled='disabled'] {
+  cursor: default !important;
+}
+.pointer-events-none {
+  pointer-events: none;
+}
+.pointer-events-all {
+  pointer-events: all;
+}
+
+//position
+$positions: sticky, fixed, absolute, relative, static;
+@each $position in $positions {
+  @include prop-media-build(position, $position, position, $position);
+}
+
+//spacing
+$directions: top, bottom, left, right;
+$direction-values: (
+  0: 0,
+  100: 100%,
+  auto: auto
+);
+@each $direction in $directions {
+  @each $name-value, $value in $direction-values {
+    @include prop-media-build($direction, $value, $direction, $name-value);
+    @if $direction == left {
+      [dir='rtl'] {
+        @include prop-media-build($direction, auto, $direction, $name-value);
+        @include prop-media-build(right, $value, $direction, $name-value);
+      }
+    } @elseif $direction == right {
+      [dir='rtl'] {
+        @include prop-media-build($direction, auto, $direction, $name-value);
+        @include prop-media-build(left, $value, $direction, $name-value);
+      }
+    }
+  }
+}
+
+//width
+@include prop-media-build(width, auto, w, auto);
+
+//display
+@include prop-media-build(display, none, d, none-important);
+
+//position
+.absolute-stretch {
+  @include stretch-block();
+}
+.fixed-stretch {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+//overflow
+.overflow-hidden {
+  overflow: hidden !important;
+}
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+
+//borders
+.border--dashed {
+  &.border-top {
+    border-top-style: dashed !important;
+  }
+  &.border-bottom {
+    border-bottom-style: dashed !important;
+  }
+  &.border-left {
+    border-left-style: dashed !important;
+  }
+  &.border-right {
+    border-right-style: dashed !important;
+  }
+  &.border {
+    border-style: dashed !important;
+  }
+}
+
+//text
+.text-underline {
+  text-decoration: underline !important;
+}
+.hover-underline:hover {
+  @include screen-up(lg) {
+    text-decoration: underline;
+  }
+}
+
+//tables
+.table-wrapper {
+  max-width: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}

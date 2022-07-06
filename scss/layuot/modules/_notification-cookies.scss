@@ -1,0 +1,24 @@
+.notification-cookies {
+  @include screen-up(sm) {
+    max-width: 435px;
+  }
+  &__bg {
+    opacity: 0.9;
+    @include screen-up(lg) {
+      transition-property: opacity;
+    }
+  }
+  &:hover &__bg {
+    @include screen-up(lg) {
+      opacity: 1;
+    }
+  }
+  &__button-info {
+    text-decoration: none !important;
+  }
+  &__button-close:hover {
+    @include screen-up(lg) {
+      text-decoration: none;
+    }
+  }
+}

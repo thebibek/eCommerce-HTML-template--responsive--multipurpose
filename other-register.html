@@ -1,0 +1,77 @@
+<!doctype html>
+<!--[if IE 9]>
+<html class="ie9 no-js supports-no-cookies" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js supports-no-cookies" lang="en"> <!--<![endif]-->
+<head>
+    //= template/head.html
+</head>
+<body id="create-account" class="template-register theme-css-animate" data-currency-multiple="true">
+//= template/header.html
+<main id="MainContent">
+    <div class="breadcrumbs mt-15">
+        <div class="container">
+            <ul class="list-unstyled d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <li><a href="index.html">Home</a></li>
+                <li><span>Create Account</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="register mb-60">
+        <div class="container">
+            <h1 class="h3 mt-30 mb-40 text-center">Sign Up</h1>
+            <form method="post" action="/account" id="create_customer" accept-charset="UTF-8"><input type="hidden"
+                                                                                                     name="form_type"
+                                                                                                     value="create_customer"/><input
+                    type="hidden" name="utf8" value="✓"/>
+                <label for="FirstName" class="label-required">FIRST NAME</label>
+                <input type="text"
+                       name="customer[first_name]"
+                       id="FirstName"
+                       placeholder="Enter your first name"
+                       required="required"
+                       autofocus
+                >
+                <label for="LastName" class="label-required">LAST NAME</label>
+                <input type="text"
+                       name="customer[last_name]"
+                       id="LastName"
+                       placeholder="Enter your last name"
+                       required="required"
+                >
+                <label for="Email" class="label-required">EMAIL</label>
+                <input type="email"
+                       name="customer[email]"
+                       id="Email"
+                       class=""
+                       placeholder="Enter your email"
+                       value=""
+                       spellcheck="false"
+                       autocomplete="off"
+                       autocapitalize="off"
+                       required="required">
+                <label for="CreatePassword" class="label-required">PASSWORD</label>
+                <input type="password"
+                       name="customer[password]"
+                       id="CreatePassword"
+                       class=""
+                       placeholder="Enter your password"
+                       required="required">
+
+                <div class="text-center">
+                    <input type="submit" value="SIGN UP NOW!" class="btn btn--full btn--secondary">
+                    <a href="https://shella-demo.myshopify.com" class="h6 btn-link mt-20 mb-0">RETURN TO STORE</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</main>
+//= template/footer.html
+//= template/popups.html
+//= template/footbar.html
+//= template/fixed-sidebar.html
+//= template/templates.html
+//= template/footer-includes.html
+</body>
+</html>

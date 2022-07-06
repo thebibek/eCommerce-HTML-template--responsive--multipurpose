@@ -1,0 +1,9 @@
+.scroll-offset-example {
+  position: fixed;
+  @include size(50px);
+  overflow-y: scroll;
+  visibility: hidden;
+  pointer-events: none;
+  left: 0;
+  bottom: -100%;
+}

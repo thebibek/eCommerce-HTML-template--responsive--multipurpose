@@ -1,0 +1,8 @@
+.popup-cart {
+  width: 270px;
+  max-width: 100%;
+  &__items > *:not(:first-child) {
+    padding-top: 20px;
+    border-top: dashed 1px;
+  }
+}

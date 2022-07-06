@@ -1,0 +1,102 @@
+.carousel {
+  &--arrows::before,
+  &--arrows::after {
+    @include screen-up(lg) {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 45px;
+      height: 100%;
+      top: 0;
+    }
+  }
+  &--arrows::before {
+    @include screen-up(lg) {
+      left: -45px;
+    }
+  }
+  &--arrows::after {
+    @include screen-up(lg) {
+      right: -45px;
+    }
+  }
+  &__items {
+    @include screen-down(lg) {
+      margin-bottom: -15px;
+    }
+  }
+  &__prev,
+  &__next {
+    top: 50%;
+    margin-top: -12px;
+    z-index: 1;
+    @include screen-up(lg) {
+      opacity: 0;
+      transition-property: opacity, transform;
+      will-change: opacity, transform;
+    }
+  }
+  &__prev {
+    @include screen-up(lg) {
+      left: -45px;
+      transform: translate3d(-20px, 0, 0);
+    }
+    @include screen-down(lg) {
+      left: 5px;
+    }
+  }
+  &__next {
+    @include screen-up(lg) {
+      right: -45px;
+      transform: translate3d(20px, 0, 0);
+    }
+    @include screen-down(lg) {
+      right: 5px;
+    }
+  }
+  &--arrows::before,
+  &--arrows::after,
+  &__prev,
+  &__next {
+    @media (min-width: map-get($breakpoints, xl)) and (max-width: map-get($breakpoints, xl) + 20px) {
+      display: none;
+    }
+    @media (min-width: map-get($breakpoints, lg)) and (max-width: map-get($breakpoints, lg) + 20px) {
+      display: none;
+    }
+  }
+  &:hover &__prev,
+  &:hover &__next {
+    @include screen-up(lg) {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .slick-slide {
+    outline: none;
+  }
+  .slick-dots {
+    margin-bottom: -15px;
+    li {
+      @include size(6px);
+      min-width: 6px;
+      padding: 0;
+      margin-left: 7px;
+      margin-right: 7px;
+      margin-bottom: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      &::before {
+        display: none;
+      }
+      &.slick-active {
+        @include size(10px);
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+    button {
+      display: none;
+    }
+  }
+}

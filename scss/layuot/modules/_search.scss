@@ -1,0 +1,5 @@
+.search__result {
+  @include screen-down(lg) {
+    margin: 0;
+  }
+}

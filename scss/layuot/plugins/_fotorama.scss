@@ -1,0 +1,12 @@
+.fullscreen {
+  width: auto !important;
+  height: auto !important;
+  max-width: inherit !important;
+  max-height: inherit !important;
+  margin: inherit !important;
+  padding: inherit !important;
+  overflow: auto !important;
+}
+.fotorama--fullscreen {
+  position: fixed !important;
+}

@@ -1,0 +1,15 @@
+.material-info {
+  &__head-icons {
+    max-width: 190px;
+  }
+  &__list {
+    li {
+      display: flex;
+      align-items: center;
+    }
+    i {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+.layer-navigation {
+  &__head.open &__arrow {
+    transform: rotate(-180deg);
+  }
+}

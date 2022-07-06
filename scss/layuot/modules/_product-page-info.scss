@@ -1,0 +1,81 @@
+.product-page-info {
+  &--max-width {
+    @include screen-up(lg) {
+      width: 100%;
+      max-width: 765px;
+    }
+  }
+  &__section--max-width {
+    @include screen-up(lg) {
+      width: 100%;
+      max-width: 370px;
+    }
+  }
+  &__reviews .spr-badge-caption,
+  &__quantity label {
+    text-transform: uppercase;
+  }
+  &__reviews {
+    .spr-badge {
+      margin-bottom: 20px;
+    }
+    .spr-badge,
+    .shopify-product-reviews-badge {
+      @include screen-down(lg) {
+        justify-content: center;
+      }
+    }
+  }
+  &__reviews--center {
+    .spr-badge,
+    .shopify-product-reviews-badge {
+      justify-content: center;
+    }
+  }
+  &__details-buttons {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  &__payments {
+    svg {
+      max-width: 60px;
+      width: 100%;
+    }
+    .icon-payment-power-by-stripe,
+    .icon-payment-power-by-stripe-light {
+      max-width: 54px;
+    }
+    .icon-payment-aes-256bit,
+    .icon-payment-aes-256bit-light {
+      max-width: 38px;
+    }
+    .icon-payment-paypal,
+    .icon-payment-paypal-light {
+      max-width: 55px;
+    }
+    .icon-payment-visa,
+    .icon-payment-visa-light {
+      max-width: 40px;
+    }
+    .icon-payment-mastercard,
+    .icon-payment-mastercard-light {
+      max-width: 33px;
+    }
+    .icon-payment-discover-network,
+    .icon-payment-discover-network-light {
+      max-width: 44px;
+    }
+    .icon-payment-american-express,
+    .icon-payment-american-express-light {
+      max-width: 51px;
+    }
+    .icon-payment-mcafee-secure,
+    .icon-payment-mcafee-secure-light {
+      max-width: 56px;
+    }
+    label {
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.blogs {
+  @include screen-up(lg) {
+    margin-bottom: 25px;
+  }
+  &__sidebar {
+    z-index: 1;
+    @include screen-up(lg) {
+      margin-top: -8px;
+    }
+  }
+  &__sidebar--width-md {
+    @include screen-up(xl) {
+      width: 400px;
+    }
+    @include screen-between(lg, xl) {
+      width: 332px;
+    }
+  }
+}
+.blogs__sidebar.blogs__sidebar--offset-bottom {
+  @include screen-up(lg) {
+    margin-bottom: -25px;
+  }
+}

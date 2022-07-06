@@ -1,0 +1,17 @@
+.product-notification {
+  &__image {
+    width: 60px;
+    min-width: 60px;
+    .rimage {
+      height: 100%;
+    }
+  }
+  &__button-quick-view {
+    margin-right: -2px;
+    margin-bottom: -4px;
+    .button-quick-view {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

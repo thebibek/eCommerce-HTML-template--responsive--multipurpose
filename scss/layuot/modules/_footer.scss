@@ -1,0 +1,109 @@
+.footer {
+  &--fixed {
+    @include screen-up(lg) {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+  .container {
+    @include screen-down(lg) {
+      max-width: none;
+    }
+  }
+  &__content--boxed-sm {
+    @include screen-up(lg) {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__section-btn {
+    @include screen-down(lg) {
+      width: 30px;
+      height: 100%;
+      top: 0;
+      right: 0;
+      margin-right: -10px;
+    }
+  }
+  &__section-head.open &__section-btn i {
+    @include screen-down(lg) {
+      transform: rotate(45deg);
+      transition-property: transform;
+      will-change: transform;
+    }
+  }
+  &__custom-html {
+    [class*='icon-'] {
+      margin-top: -2px;
+    }
+  }
+  &__social-media-mobile {
+    @include screen-down(lg) {
+      padding-left: 7%;
+      padding-right: 7%;
+    }
+  }
+  &__payments {
+    margin-left: -5px;
+    margin-right: -5px;
+    @include screen-down(lg) {
+      padding-left: 12%;
+      padding-right: 12%;
+    }
+    svg {
+      max-width: 50px;
+      width: 100%;
+    }
+    .icon-payment-shopify-secure,
+    .icon-payment-shopify-secure-light {
+      max-width: 53px;
+    }
+    .icon-payment-aes-256bit,
+    .icon-payment-aes-256bit-light {
+      max-width: 34px;
+    }
+    .icon-payment-visa,
+    .icon-payment-visa-light {
+      max-width: 36px;
+    }
+    .icon-payment-mastercard,
+    .icon-payment-mastercard-light {
+      max-width: 30px;
+    }
+    .icon-payment-discover-network,
+    .icon-payment-discover-network-light {
+      max-width: 40px;
+    }
+    .icon-payment-american-express,
+    .icon-payment-american-express-light {
+      max-width: 47px;
+    }
+  }
+  &__back-to-top {
+    @include screen-up(lg) {
+      width: 30px;
+      height: 30px;
+      top: 100%;
+      right: 0;
+      z-index: 1;
+    }
+    @include screen-down(lg) {
+      min-height: 35px;
+    }
+    &.show {
+      @include screen-up(lg) {
+        top: auto;
+        bottom: 16px;
+      }
+    }
+    &[data-bind] {
+      @include screen-up(lg) {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

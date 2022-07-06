@@ -1,0 +1,15 @@
+.breadcrumbs {
+  ul {
+    margin-left: -3px;
+    margin-right: -3px;
+  }
+  a, span {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  li:not(:first-child)::before {
+    content: '/';
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+}

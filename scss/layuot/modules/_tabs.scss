@@ -1,0 +1,178 @@
+.tabs {
+  overflow: hidden;
+  @include screen-down(sm) {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  &__nav {
+    display: none;
+  }
+  &[data-type="horizontal"] &__head#{&}__head--slider &__nav {
+    @include screen-up(lg) {
+      display: flex;
+      @include flex-center();
+      position: absolute;
+      width: 20px;
+      height: 100%;
+      top: 0;
+      cursor: pointer;
+      z-index: 2;
+    }
+    &.disabled {
+      @include screen-up(lg) {
+        display: none !important;
+      }
+    }
+    &--prev {
+      @include screen-up(lg) {
+        left: -2px;
+      }
+    }
+    &--next {
+      @include screen-up(lg) {
+        right: -2px;
+      }
+    }
+  }
+  &[data-type="horizontal"] &__body {
+    @include screen-up(lg) {
+      //height: 400px;
+      overflow-x: auto;
+    }
+    @include screen-down(lg) {
+      border-top: solid 1px transparent;
+      border-bottom: solid 1px transparent;
+    }
+    & > div {
+      display: block;
+      &:not(:first-child) > span {
+        @include screen-down(lg) {
+          min-height: 33px;
+          border-top: solid 1px transparent;
+        }
+      }
+      & > span {
+        @include screen-up(lg) {
+          display: none;
+        }
+        @include screen-down(lg) {
+          position: relative;
+          display: block;
+          padding: 8px 15px;
+          text-transform: uppercase;
+          text-align: center;
+          cursor: pointer;
+          transition-property: transform;
+          will-change: transform;
+        }
+        i {
+          @include screen-down(lg) {
+            position: absolute;
+            right: 5px;
+            top: 6px;
+          }
+        }
+      }
+      &.active > span {
+        i {
+          @include screen-down(lg) {
+            transform: rotate(45deg);
+          }
+        }
+      }
+      & > div {
+        display: none;
+      }
+    }
+  }
+  &[data-type="horizontal"] &__content {
+    @include screen-up(lg) {
+      padding: 35px 0;
+    }
+    @include screen-down(lg) {
+      padding: 10px 10px;
+    }
+  }
+  &[data-type="horizontal"] &__head {
+    @include screen-up(lg) {
+      position: relative;
+      border-bottom: solid 1px transparent;
+    }
+    @include screen-down(lg) {
+      display: none;
+    }
+  }
+  &[data-type="horizontal"] &__slider {
+    @include screen-up(lg) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: -1px;
+    }
+  }
+  &[data-type="horizontal"] &__btn {
+    @include screen-up(lg) {
+      padding: 6px 20px;
+      outline: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      border: solid 1px transparent;
+    }
+  }
+  &[data-type="mobile"] &__body {
+    border-top: solid 1px transparent;
+    border-bottom: solid 1px transparent;
+    & > div {
+      display: block;
+      &:not(:first-child) > span {
+        min-height: 33px;
+        border-top: solid 1px transparent;
+      }
+      & > span {
+        position: relative;
+        display: block;
+        text-transform: uppercase;
+        cursor: pointer;
+        @include screen-up(lg) {
+          padding: 8px 0;
+        }
+        @include screen-down(lg) {
+          padding: 8px 15px;
+          text-align: center;
+        }
+        i {
+          position: absolute;
+          top: 6px;
+          transition-property: transform;
+          will-change: transform;
+          @include screen-up(lg) {
+            right: -6px;
+          }
+          @include screen-down(lg) {
+            right: 5px;
+          }
+        }
+      }
+      &.active > span {
+        i {
+          transform: rotate(45deg);
+        }
+      }
+      & > div {
+        display: none;
+      }
+    }
+  }
+  &[data-type="mobile"] &__content {
+    @include screen-up(lg) {
+      padding: 10px 0;
+    }
+    @include screen-down(lg) {
+      padding: 10px 10px;
+    }
+  }
+  &[data-type="mobile"] &__head {
+    display: none;
+  }
+}

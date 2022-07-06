@@ -1,0 +1,12 @@
+.loader:not(.loader--page) .loader__bg {
+  opacity: 0.8;
+}
+.product-image,
+.product-image__overlay-top,
+.product-image__overlay-bottom {
+  & > a {
+    @media (min-width: $screen-lg-up) {
+      cursor: $product-cursor !important;
+    }
+  }
+}

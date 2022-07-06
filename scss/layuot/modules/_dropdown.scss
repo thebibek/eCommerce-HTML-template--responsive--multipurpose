@@ -1,0 +1,33 @@
+.dropdown {
+  a, span {
+    @include screen-up(lg) {
+      display: block;
+      padding: 0 7px;
+      white-space: nowrap;
+    }
+  }
+  span {
+    cursor: pointer;
+  }
+  &.show {
+    @include screen-up(lg) {
+      display: block !important;
+    }
+  }
+  & > * {
+    @include screen-up(lg) {
+      opacity: 0;
+    }
+  }
+  &.animate > * {
+    @include screen-up(lg) {
+      will-change: opacity;
+      transition-property: opacity;
+    }
+  }
+  &.visible > * {
+    @include screen-up(lg) {
+      opacity: 1;
+    }
+  }
+}

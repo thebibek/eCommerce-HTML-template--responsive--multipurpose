@@ -1,0 +1,22 @@
+.instafeed {
+  &__curtain {
+    @include screen-up(lg) {
+      opacity: 0;
+      transition-property: opacity;
+      will-change: opacity;
+    }
+    &::before {
+      content: '';
+      display: block;
+      opacity: 0.6;
+      @include stretch-block();
+    }
+  }
+}
+.instafeed__item:hover {
+  .instafeed__curtain {
+    @include screen-up(lg) {
+      opacity: 1;
+    }
+  }
+}

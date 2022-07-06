@@ -1,0 +1,6 @@
+.notification-products {
+  @include screen-up(sm) {
+    width: 270px;
+    max-width: 100%;
+  }
+}

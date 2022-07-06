@@ -1,0 +1,203 @@
+/*
+Theme Name: Shella
+Theme URI: https://mpthemes.net/shella-html-template/html-master/dist/
+Author: MPIthemes
+Author URI: https://mpthemes.net
+Description: Shella fast responsive HTML template
+Version: 1.0.0
+*/
+
+/*
+--------------------------------------------
+	Table of Contents
+--------------------------------------------
+
+"-" - designation of the name of the scss file, which corresponds to the block name and the name of the main class of the block according to the BEM methodology. You can find the block in the CSS file by searching for the specified name. example: ".header".
+
+.. 1. Layout (layout/)
+   - layout
+.... 1.1 Global (global/)
+     - mixin
+     - variables
+     - type
+     - modifiers
+     - standart-colors
+.... 1.2 Plugins (plugins/)
+     - slick
+     - spr
+     - weglot
+     - ion_range_slider
+     - fotorama
+     - slider-revolution
+     - addthis
+     - tippy
+.... 1.3 Elements (elements/)
+     - rimage
+     - rvideo
+     - scroll-offset-example
+     - icons
+     - form
+     - buttons
+     - label
+     - price
+     - button-quick-view
+     - image-animation
+     - responsive-block
+.... 1.4 Modules (modules/)
+     - header
+     - slider
+     - breadcrumbs
+     - social-media
+     - countdown
+     - stock-countdown
+     - text-countdown
+     - visitors
+     - free-shipping
+     - dropdown
+     - table-product-sizes
+     - material-info
+     - tabs
+     - product-options
+     - product-images-navigation
+     - product-image
+     - product-collection
+     - product-wishlist
+     - product-compare
+     - product-search
+     - product-cart
+     - product-store-lists
+     - product-featured
+     - product-notification
+     - products-grid-buttons
+     - dynamic-checkout
+     - product-page
+     - product-page-gallery
+     - product-page-info
+     - product-fixed-sizebar
+     - popup
+     - popup-navigation
+     - popup-sidebar
+     - popup-cart
+     - popup-wishlist
+     - popup-wishlist-full
+     - popup-compare-full
+     - popup-account
+     - popup-services
+     - popup-subscription
+     - popup-password
+     - popup-quick-view
+     - popup-delivery-return
+     - popup-size-guide
+     - popup-confirm-transfer-data
+     - footbar
+     - fixed-sidebar
+     - notification
+     - notification-cookies
+     - notification-products
+     - footbar-product
+     - form-input-button
+     - search
+     - promo-text
+     - promobox
+     - brand
+     - menu
+     - collections
+     - collection-head
+     - collection-control
+     - layer-navigation
+     - collections-menu
+     - collection-filter-by-price
+     - collection-filters
+     - collection-current-tags
+     - collection-sidebar-offers
+     - carousel
+     - carousel-articles
+     - pagination
+     - compare
+     - cart
+     - login
+     - register
+     - reset-password
+     - activate-account
+     - gallery
+     - blog
+     - post
+     - article
+     - article-slider
+     - instafeed
+     - faqs
+     - contact-map
+     - table-account-addresses
+     - table-account-history
+     - table-size-guide
+     - lookbook
+     - password-page-content
+     - captcha
+     - 404
+     - footer
+.... 1.5 RTL (global/)
+     - rtl
+.. 2. Utils (tools/)
+   - mixins
+.. 3. Settings (settings/)
+   - variables
+.. 4. Commons (global/)
+   - variables
+.. 5. Fonts (font/)
+   - variables
+   - body
+.. 6. Colorize (colorize/)
+   - variables
+   - body
+.. 7. Animations (animation/)
+   - variables
+   - body
+.. 8. Other (other/)
+   - variables
+   - body
+.. 9. Presentation (global/)
+   - presentation
+*/
+
+@charset "UTF-8";
+
+/*START: 1. Layout*/
+@import 'layuot/_layout.scss';
+/*END: 1. Layout*/
+
+/*START: 2. Utils*/
+@import 'tools/_mixins.scss';
+/*END: 2. Utils*/
+
+/*START: 3. Settings*/
+@import 'settings/_variables.scss';
+/*END: 3. Settings*/
+
+/*START: 4. Commons*/
+@import 'global/_rte.scss';
+/*END: 4. Commons*/
+
+/*START: 5. Fonts*/
+@import 'font/_variables.scss';
+@import 'font/_body.scss';
+/*END: 5. Fonts*/
+
+/*START: 6. Colorize*/
+@import 'colorize/_variables.scss';
+@import 'colorize/_body.scss';
+/*END: 6. Colorize*/
+
+/*START: 7. Animations*/
+@import 'animation/_variables.scss';
+@import 'animation/_body.scss';
+/*END: 7. Animations*/
+
+/*START: 8. Other*/
+@import 'other/_variables.scss';
+@import 'other/_body.scss';
+/*END: 8. Other*/
+
+/*START: 9. Presentation*/
+@import 'global/_presentation.scss';
+/*END: 9. Presentation*/
+

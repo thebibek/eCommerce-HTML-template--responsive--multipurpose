@@ -1,0 +1,32 @@
+.promo-text {
+  &--width-01 {
+    @include screen-up(lg) {
+      width: 650px;
+    }
+  }
+  &--width-02 {
+    @include screen-up(lg) {
+      width: 500px;
+    }
+  }
+  &--width-03 {
+    @include screen-up(lg) {
+      width: 400px;
+    }
+  }
+  &__buttons {
+    @include screen-down(lg) {
+      max-width: 350px;
+    }
+  }
+  &--width-01 &__buttons {
+    @include screen-up(lg) {
+      max-width: 450px;
+    }
+  }
+  &--width-02 &__buttons {
+    @include screen-up(lg) {
+      max-width: 220px;
+    }
+  }
+}

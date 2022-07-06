@@ -1,0 +1,25 @@
+.footbar-product {
+  @include screen-down(sm) {
+    z-index: 1;
+  }
+  & > * {
+    min-height: 80px;
+  }
+  &.show {
+    display: block !important;
+  }
+  & > * {
+    opacity: 0;
+  }
+  &.animate > * {
+    will-change: opacity;
+    transition-property: opacity;
+  }
+  &.visible > * {
+    opacity: 1;
+  }
+  &__image {
+    width: 60px;
+    min-width: 60px;
+  }
+}

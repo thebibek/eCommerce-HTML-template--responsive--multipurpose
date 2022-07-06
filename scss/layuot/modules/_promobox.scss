@@ -1,0 +1,95 @@
+.promobox {
+  a {
+    pointer-events: all;
+  }
+  &__plate {
+    min-height: 35px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  }
+  &__plate--hovered,
+  &__content-scale {
+    @include screen-up(lg) {
+      backface-visibility: hidden;
+      transition-property: opacity, transform;
+      will-change: opacity, transform;
+    }
+  }
+  &__plate {
+    &::before {
+      content: '';
+      display: block;
+      opacity: 0.9;
+      @include stretch-block();
+    }
+  }
+  &__content-scale {
+    &::before {
+      @include screen-up(lg) {
+        content: '';
+        display: block;
+        opacity: 0.9;
+        @include stretch-block();
+      }
+    }
+  }
+  &__content,
+  &__content-scale {
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  }
+  &__content-scale {
+    @include screen-up(lg) {
+      opacity: 0;
+      transform: scale3d(0, 0, 0);
+    }
+  }
+  &__content_inner {
+    @include screen-down(lg) {
+      max-width: 100% !important;
+      top: initial !important;
+      bottom: initial !important;
+      left: initial !important;
+      right: initial !important;
+      margin: initial !important;
+    }
+  }
+  .css-theme-loaded &:not(.promobox--is-slider) &__content,
+  .css-theme-loaded .slick-active &__content {
+    transform: none;
+    opacity: 1;
+  }
+  &:hover &__plate--hovered {
+    @include screen-up(lg) {
+      opacity: 0;
+      transform: scale3d(0, 0, 0) translate3d(0, -100%, 0);
+    }
+  }
+  &:hover &__content-scale {
+    @include screen-up(lg) {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  &__border {
+    @include screen-up(lg) {
+      border: solid 1px transparent;
+      opacity: 0;
+      transition-property: opacity;
+      will-change: opacity;
+    }
+  }
+  &:hover &__border {
+    @include screen-up(lg) {
+      opacity: 1;
+    }
+  }
+}
+.promobox--type-01 a.promobox__text-line-01:hover {
+  @include screen-up(lg) {
+    text-decoration: underline;
+  }
+}

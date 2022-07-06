@@ -1,0 +1,9 @@
+.popup-services {
+  width: 270px;
+  max-width: 100%;
+  &__content {
+    [class*='icon-'] {
+      margin-top: -2px;
+    }
+  }
+}

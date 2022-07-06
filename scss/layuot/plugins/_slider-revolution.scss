@@ -1,0 +1,51 @@
+.slider-revolution {
+  .tp-bullet {
+    @include screen-up(md) {
+      @include size(6px);
+      border-radius: 50%;
+    }
+    @include screen-down(md) {
+      display: none;
+    }
+    &.selected {
+      @include screen-up(md) {
+        @include size(10px);
+        margin-top: -2px;
+        margin-left: -2px;
+        margin-right: -2px;
+        cursor: default;
+      }
+    }
+  }
+  .tparrows {
+    @include screen-down(lg) {
+      display: none;
+    }
+  }
+  .tp-resizeme {
+    .btn {
+      border-width: 1px !important;
+    }
+  }
+  .tp-video-play-button {
+    margin: 0;
+    top: auto;
+    bottom: 40px;
+    left: auto;
+    right: 40px;
+  }
+  &.revslider-initialised + &__spacer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+    transition-property: opacity;
+    will-change: opacity;
+  }
+}
+.is-edge .slider-revolution video {
+  width: auto !important;
+  height: auto !important;
+}

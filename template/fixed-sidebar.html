@@ -1,0 +1,62 @@
+<aside class="fixed-sidebar d-flex flex-column align-items-end position-fixed right-0 pointer-events-none">
+    <div class="fixed-sidebar__section my-15">
+        <div class="presentation position-relative pointer-events-all js-presentation">
+            <div class="presentation__btn d-flex flex-center position-absolute top-0 right-100 cursor-pointer"
+                 data-js-presentation-close>
+                <i>
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-theme-301"
+                         viewBox="0 0 24 18">
+                        <path d="M13.065 5.949L12.27 5.8c-.868-.183-1.23-1.181-.669-1.839l.526-.587c.435-.497.37-1.183-.132-1.546l-.874-.71C10.6.7 9.884.761 9.503 1.241l-.525.587c-.562.657-1.688.442-1.975-.346L6.735.747C6.525.17 5.858-.139 5.254.061l-1.1.365c-.605.201-.928.838-.717 1.416l.248.683c.287.788-.456 1.624-1.324 1.44l-.774-.095c-.665-.133-1.248.296-1.351.86L.01 5.806c-.084.617.31 1.192.92 1.343l.794.15c.849.13 1.23 1.18.65 1.786l-.526.587c-.435.497-.37 1.183.131 1.546l.875.71c.521.417 1.238.355 1.619-.124l.545-.534c.561-.658 1.687-.443 1.974.346l.268.735c.21.578.877.887 1.482.686l1.1-.365c.604-.2.927-.838.716-1.416l-.248-.683c-.287-.788.457-1.624 1.324-1.44l.794.148c.664.133 1.248-.296 1.35-.86l.225-1.076c.065-.67-.33-1.245-.94-1.396zM7.763 8.651c-1.21.401-2.543-.216-2.964-1.372-.42-1.156.225-2.43 1.434-2.832 1.21-.401 2.544.216 2.964 1.372.42 1.156-.225 2.43-1.434 2.832z"
+                              fill="#fff"/>
+                        <path d="M23.184 11.825l-.681-.132c-.746-.16-1.06-1.026-.58-1.593l.45-.507c.371-.43.313-1.023-.118-1.339l-.753-.618c-.449-.361-1.064-.31-1.389.104l-.45.506c-.48.568-1.446.378-1.695-.305l-.232-.637c-.182-.501-.755-.77-1.274-.598l-.942.313a.95.95 0 0 0-.611 1.223l.215.592c.249.683-.386 1.405-1.132 1.244l-.665-.086c-.57-.117-1.07.253-1.156.741l-.19.93a1.06 1.06 0 0 0 .794 1.166l.682.131c.728.116 1.06 1.027.563 1.549l-.45.506c-.371.43-.314 1.023.118 1.34l.753.617c.449.361 1.064.31 1.388-.104l.467-.46c.48-.568 1.446-.379 1.695.304l.232.638c.182.501.756.77 1.274.598l.942-.313a.95.95 0 0 0 .611-1.223l-.215-.592c-.248-.684.387-1.405 1.132-1.244l.682.131c.57.117 1.07-.253 1.156-.74l.19-.931c.053-.58-.287-1.08-.81-1.211zm-4.542 2.324c-1.036.344-2.183-.195-2.547-1.196-.365-1.002.185-2.104 1.222-2.448 1.037-.344 2.183.194 2.548 1.196.364 1.002-.186 2.103-1.223 2.447z"
+                              fill="#fff"/>
+                    </svg>
+                </i>
+                <i>
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-theme-164"
+                         viewBox="0 0 24 24">
+                        <path d="M19.583 4.965a.65.65 0 0 1-.176.449l-6.445 6.426 6.445 6.426c.117.131.176.28.176.449a.65.65 0 0 1-.176.449.846.846 0 0 1-.215.127.596.596 0 0 1-.468 0 .846.846 0 0 1-.215-.127l-6.426-6.445-6.426 6.445a.846.846 0 0 1-.215.127.596.596 0 0 1-.468 0 .846.846 0 0 1-.215-.127.65.65 0 0 1-.176-.449c0-.169.059-.318.176-.449l6.445-6.426-6.445-6.426a.65.65 0 0 1-.176-.449c0-.169.059-.318.176-.449a.652.652 0 0 1 .449-.176c.169 0 .319.059.449.176l6.426 6.445 6.426-6.445a.652.652 0 0 1 .449-.176c.169 0 .319.059.449.176.117.13.176.28.176.449z"/>
+                    </svg>
+                </i>
+            </div>
+            <div class="presentation__content p-20">
+                <div class="presentation__section pb-20 border-bottom">
+                    <label class="input-boolean d-flex flex-wrap align-items-center m-0 cursor-pointer">
+                        <input type="checkbox" class="d-none" data-js-action="container">
+                        <span class="position-relative d-flex order-1 ml-auto border">
+                            <span class="position-absolute d-block border"></span>
+                        </span>
+                        <span class="input-boolean__label m-0 cursor-pointer">Boxed</span>
+                    </label>
+                    <label class="input-boolean d-flex flex-wrap align-items-center m-0 mt-10 cursor-pointer">
+                        <input id="presentation-rtl" type="checkbox" class="d-none" data-js-action="rtl">
+                        <span class="position-relative d-flex order-1 ml-auto border">
+                            <span class="position-absolute d-block border"></span>
+                        </span>
+                        <span class="input-boolean__label m-0 cursor-pointer">RTL</span>
+                    </label>
+                    <label class="input-boolean d-flex flex-wrap align-items-center m-0 mt-10 cursor-pointer">
+                        <input id="presentation-animation" type="checkbox" class="d-none" checked="checked"
+                               data-js-action="animation" data-invert="true">
+                        <span class="position-relative d-flex order-1 ml-auto border">
+                            <span class="position-absolute d-block border"></span>
+                        </span>
+                        <span class="input-boolean__label m-0 cursor-pointer">Animation</span>
+                    </label>
+                </div>
+                <div class="presentation__section py-20 border-bottom">
+                    <a href="../../html-documentation/index.html" target="_blank">Documentation</a>
+                </div>
+                <div class="presentation__section pt-20">
+                    <a href="http://bit.ly/2UXO8zH" target="_blank">BUY NOW!</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            Loader.require({
+                type: "script",
+                name: "presentation"
+            });
+        </script>
+    </div>
+</aside>

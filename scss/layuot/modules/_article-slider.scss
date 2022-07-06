@@ -1,0 +1,50 @@
+.article-slider {
+  img {
+    width: auto !important;
+  }
+  &__slick img {
+    width: 100%;
+    margin: 0 !important;
+  }
+  .slick-slide {
+    outline: none;
+  }
+  .slick-arrow {
+    @include size(35px);
+    top: 50%;
+    margin-top: -17px;
+    z-index: 1;
+    &::before {
+      content: '';
+      display: block;
+      @include stretch-block();
+      opacity: 0.8;
+    }
+    &.slick-disabled {
+      display: none !important;
+    }
+  }
+  .slick-dots {
+    li {
+      @include size(6px);
+      min-width: 6px;
+      padding: 0;
+      margin-left: 7px;
+      margin-right: 7px;
+      margin-bottom: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      &::before {
+        display: none;
+      }
+      &.slick-active {
+        @include size(10px);
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+    button {
+      display: none;
+    }
+  }
+}

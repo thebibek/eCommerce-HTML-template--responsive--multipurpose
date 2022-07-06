@@ -1,0 +1,104 @@
+.product-page-gallery {
+  @include screen-down(lg) {
+    max-width: 500px;
+  }
+  .fotorama {
+    &__fullscreen-icon,
+    &__arr {
+      display: none !important;
+    }
+  }
+  .zoomContainer {
+    display: block !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate3d(-50%, -50%, 0) !important;
+  }
+  &--centered {
+    width: 100%;
+    max-width: 510px;
+  }
+  &__main {
+    @include screen-up(lg) {
+      width: calc(100% - 80px);
+    }
+    @include screen-down(lg) {
+      width: 100%;
+    }
+  }
+  &__main--single {
+    width: 100%;
+  }
+  &__main-arrow {
+    @include size(35px);
+    top: 50%;
+    margin-top: -17px;
+    z-index: 1;
+    &::before {
+      @include screen-up(lg) {
+        content: '';
+        display: block;
+        @include stretch-block();
+        opacity: 0.8;
+      }
+    }
+    &.disabled,
+    &.slick-disabled {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+  }
+  &--centered [data-js-product-gallery-main-btn-prev] {
+    @include screen-up(xl) {
+      margin-left: -40px !important;
+    }
+  }
+  &--centered [data-js-product-gallery-main-btn-next] {
+    @include screen-up(xl) {
+      margin-right: -40px !important;
+    }
+  }
+  &__preview {
+    @include screen-up(lg) {
+      min-width: 70px;
+      width: 70px;
+    }
+    .current {
+      border: solid 1px;
+    }
+  }
+  &__preview-arrows {
+    margin-bottom: -8px;
+    div.slick-hidden {
+      display: none !important;
+    }
+  }
+  &__panorama {
+    @include screen-up(sm) {
+      margin-left: -5px;
+      margin-top: -5px;
+    }
+  }
+  &__collage {
+    @include screen-up(md) {
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+    & > .col {
+      @include screen-up(md) {
+        width: 20%;
+        min-width: 20%;
+        flex-grow: inherit;
+      }
+    }
+    .current + div::before {
+      @include screen-up(md) {
+        display: block;
+        content: '';
+        @include stretch-block();
+        border: solid 1px;
+      }
+    }
+  }
+}

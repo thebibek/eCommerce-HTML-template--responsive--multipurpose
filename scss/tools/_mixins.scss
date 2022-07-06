@@ -1,0 +1,133 @@
+//media
+
+
+//color
+@function color($color, $default) {
+  @if $color == false or lightness($color) == 0 {
+    $color: $default;
+  }
+
+  @if $color == $theme-transparent {
+    $color: transparent;
+  }
+
+  @return $color;
+}
+
+@mixin color-class($class, $prop, $color) {
+  @if $color == 'transparent' or $color == $theme-transparent or $color != false and lightness($color) != 0 {
+    @if $color == $theme-transparent {
+      $color: transparent;
+    }
+
+    .colorize-#{$class} {
+      #{$prop}: $color;
+    }
+    .colorize-#{$class}-h:hover {
+      @media (min-width: $screen-lg-up) {
+        #{$prop}: $color;
+      }
+    }
+    .colorize-#{$class}-imp {
+      #{$prop}: $color !important;
+    }
+    .colorize-#{$class}-h-imp:hover {
+      @media (min-width: $screen-lg-up) {
+        #{$prop}: $color !important;
+      }
+    }
+  }
+}
+
+@mixin colorize-btn($button-bg, $button-bd, $button-c, $button-h-bg, $button-h-bd, $button-h-c, $button-act-bg, $button-act-bd, $button-act-c) {
+  background-color: $button-bg;
+  border-color: $button-bd;
+  @include link-color($button-c);
+  &:focus {
+    color: $button-c;
+  }
+  &,
+  & span,
+  & i {
+    color: $button-c;
+  }
+  & i svg {
+    fill: $button-c;
+  }
+  &:hover {
+    @media (min-width: $screen-lg-up) {
+      background-color: $button-h-bg;
+      border-color: $button-h-bd;
+      color: $button-h-c;
+    }
+    i, span {
+      @media (min-width: $screen-lg-up) {
+        color: $button-h-c;
+      }
+    }
+    i svg {
+      @media (min-width: $screen-lg-up) {
+        fill: $button-h-c;
+      }
+    }
+  }
+  &.active {
+    background-color: $button-act-bg;
+    border-color: $button-act-bd;
+    @include link-color($button-act-c);
+    &:focus {
+      color: $button-act-c;
+    }
+    i, span {
+      color: $button-act-c;
+    }
+    i svg {
+      fill: $button-act-c;
+    }
+  }
+};
+
+@mixin color-class-group($class, $color) {
+  @include color-class('#{$class}-bg', 'background-color', $color);
+  @include color-class('#{$class}-c', 'color', $color);
+  @include color-class('#{$class}-bd', 'border-color', $color);
+}
+
+@mixin link-color($arguments...) {
+  &,
+  &:visited,
+  &:active,
+  &:link {
+    color: $arguments;
+  }
+}
+
+@mixin input-color($arguments...) {
+  color: $arguments;
+  &::-webkit-input-placeholder { color: $arguments; }
+  &::-moz-placeholder { color: $arguments; }
+  &:-ms-input-placeholder { color: $arguments; }
+  &:-moz-placeholder { color: $arguments; }
+}
+
+@mixin desktop-hover-color($property, $arguments) {
+  &:hover {
+    @media (min-width: $screen-lg-up) {
+      #{$property}: $arguments;
+    }
+  }
+}
+
+@mixin shadow($arguments...) {
+  -webkit-box-shadow: $arguments;
+  -moz-box-shadow: $arguments;
+  box-shadow: $arguments;
+}
+
+//animation
+@mixin transition($arguments...) {
+  -webkit-transition: $arguments;
+  -moz-transition: $arguments;
+  -ms-transition: $arguments;
+  transition: $arguments;
+}

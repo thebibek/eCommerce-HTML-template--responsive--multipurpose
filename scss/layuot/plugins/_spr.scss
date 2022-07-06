@@ -1,0 +1,109 @@
+#shopify-product-reviews {
+  margin: 0 !important;
+}
+.spr-badge,
+.shopify-product-reviews-badge {
+  display: flex !important;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.spr-starrating.spr-badge-starrating {
+  margin-right: 10px;
+}
+.spr-icon.spr-icon-star-empty {
+  opacity: 1 !important;
+}
+.spr-badge-caption {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.spr-starrating .spr-icon:not(last-child) {
+  margin-right: 4px;
+}
+.spr.spr--empty-hide .spr-badge[data-rating="0.0"] {
+  display: none !important;
+}
+.spr--text-hide-mobile .spr-badge-caption {
+  @include screen-down(lg) {
+    display: none !important;
+  }
+}
+.spr.spr--text-hide .spr-badge-caption {
+  display: none !important;
+}
+.spr.spr--center.spr--text-hide-mobile .spr-starrating.spr-badge-starrating {
+  &, .spr-icon:last-child {
+    @include screen-down(lg) {
+      margin-right: 0;
+    }
+  }
+}
+.spr.spr--center.spr--text-hide .spr-starrating.spr-badge-starrating {
+  &, .spr-icon:last-child {
+    margin-right: 0;
+  }
+}
+.spr-container {
+  padding: 0 !important;
+  border: none !important;
+}
+.spr-review-header-title {
+  text-transform: uppercase;
+}
+.spr-review-header-byline,
+.spr-review-content-body {
+  margin-top: 10px !important;
+}
+.spr-header-title {
+  margin-bottom: 6px !important;
+}
+.spr-review-header-byline {
+  margin-bottom: 0 !important;
+}
+.spr-summary {
+  margin-top: 6px !important;
+  display: flex;
+  align-items: flex-end;
+}
+.spr-summary-actions {
+  margin-left: auto;
+}
+.spr-review:first-child {
+  margin-top: 30px !important;
+}
+.spr-review {
+  position: relative;
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
+  border-top-style: dashed !important;
+}
+.spr-starratings {
+  margin-bottom: 12px !important;
+}
+.spr-review-reportreview {
+  position: absolute;
+  top: 27px;
+  right: 0;
+  text-decoration: underline !important;
+}
+.spr-review-content {
+  margin-bottom: 0 !important;
+}
+.spr-form {
+  padding-top: 25px !important;
+  margin-top: 30px !important;
+  border-top-style: dashed !important;
+}
+.spr-form-title {
+  margin-bottom: 20px;
+}
+.spr-form-label {
+  text-transform: uppercase;
+}
+.spr-form-actions {
+  margin-top: 15px !important;
+}
+.spr-button {
+  float: left !important;
+}
+

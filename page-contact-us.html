@@ -1,0 +1,111 @@
+<!doctype html>
+<!--[if IE 9]>
+<html class="ie9 no-js supports-no-cookies" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js supports-no-cookies" lang="en"> <!--<![endif]-->
+<head>
+    //= template/head.html
+</head>
+<body id="contact" class="template-page theme-css-animate" data-currency-multiple="true">
+//= template/header.html
+<main id="MainContent">
+    <div class="breadcrumbs mt-15">
+        <div class="container">
+            <ul class="list-unstyled d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <li><a href="index.html">Home</a></li>
+                <li><span>Contact</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container mb-60">
+        <div class="row mt-30">
+            <div class="col-12 col-md-4 mb-30">
+                <div class="rte">
+
+
+                    <h1 class="h3 mb-30">Here to Help</h1>
+                    <p>Have a question? You may find an answer in our FAQs. But you can also contact us:</p>
+                    <h5>Call Us: 800-123-4567<br>747 MADISON AVENUE, NEW YORK, NY 10065</h5>
+                    <ul class="list-unstyled">
+                        <li>Opening Hours:</li>
+                        <li>Monday to Friday 9:00 am - 6:00 pm</li>
+                        <li>Saturday 9:00 am - 4:00 pm</li>
+                        <li>Sunday: 9 pm - 2:00 pm</li>
+                    </ul>
+                </div>
+                <div class="mt-30">
+                    <div id="theme-section-contact-map" class="theme-section">
+                        <div class="contact-map position-relative">
+
+
+                            <iframe width="600" height="450" style="border:0"
+                                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBwY_0PWuwH_A5y4iwNAqpaUbUjRPySkFc%0A%20%20%20%20&q=7563%20St.%20Vicent%20Place,%20Glasgow"
+                                    allowfullscreen=""></iframe>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-8">
+                <h2 class="h3">Drop Us A Line</h2>
+                <p class="fs-lg">We’re happy to answer any questions you have or provide you with an estimate. Just send
+                    us a message in the form below with any questions you may have.</p>
+                <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8"
+                      class="contact-form"><input type="hidden" name="form_type" value="contact"/><input type="hidden"
+                                                                                                         name="utf8"
+                                                                                                         value="✓"/>
+                    <label for="ContactFormName" class="label-required">NAME (required)</label>
+                    <input type="text"
+                           name="contact[name]"
+                           id="ContactFormName"
+                           placeholder="Enter Please Your Name"
+                           value=""
+                           required="required">
+                    <label for="ContactFormEmail" class="label-required">EMAIL (required)</label>
+                    <input type="email"
+                           name="contact[email]"
+                           id="ContactFormEmail"
+                           placeholder="Enter Please Your Email Address"
+                           value=""
+                           spellcheck="false"
+                           autocomplete="off"
+                           autocapitalize="off"
+                           required="required">
+                    <label for="ContactFormPhone" class="label-required">PHONE NUMBER (required)</label>
+                    <input type="tel"
+                           class="form-control"
+                           name="contact[phone]"
+                           id="ContactFormPhone"
+                           placeholder="Enter Please Your Phone Number"
+                           value=""
+                           required="required">
+                    <label for="ContactFormMessage" class="label-required">YOUR MESSAGE (required)</label>
+        <textarea rows="8"
+                  name="contact[body]"
+                  id="ContactFormMessage"
+                  placeholder="Enter Please Your Message"
+                  required="required"></textarea>
+
+                    <div class="pt-10">
+                        <button type="submit" class="btn btn--secondary"><i class="mr-5">
+                            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-theme-196"
+                                 viewBox="0 0 24 24">
+                                <path d="M21.842 2.54a.601.601 0 0 1 .186.439v12.5c0 .169-.062.315-.186.439s-.271.186-.439.186h-8.535l-5.449 4.238c-.065.052-.13.088-.195.107s-.13.029-.195.029c-.052 0-.101-.007-.146-.02l-.127-.039c-.104-.052-.188-.13-.254-.234s-.098-.215-.098-.332v-3.75h-3.75c-.169 0-.315-.062-.439-.186s-.186-.271-.186-.439v-12.5c0-.169.062-.315.186-.439s.271-.186.439-.186h18.75a.606.606 0 0 1 .438.187zm-1.065 1.064h-17.5v11.25h3.75c.169 0 .315.062.439.186s.186.271.186.439v3.105l4.609-3.594c.065-.052.13-.088.195-.107s.13-.029.195-.029h8.125V3.604z"/>
+                            </svg>
+                        </i>SUBMIT
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</main>
+//= template/footer.html
+//= template/popups.html
+//= template/footbar.html
+//= template/fixed-sidebar.html
+//= template/templates.html
+//= template/footer-includes.html
+</body>
+</html>

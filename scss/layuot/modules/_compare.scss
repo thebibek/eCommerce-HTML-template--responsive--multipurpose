@@ -1,0 +1,36 @@
+.compare {
+  table {
+    overflow-x: auto;
+  }
+  td {
+    @include screen-down(md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__title {
+    max-width: 170px;
+    min-width: 170px;
+  }
+  &__title:first-child {
+    @include screen-down(md) {
+      display: none;
+    }
+  }
+  &__title:last-child h4 {
+    @include screen-up(md) {
+      font-size: 0;
+    }
+  }
+  &__items {
+    @include screen-down(md) {
+      padding-right: 10px;
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+  }
+  &__item {
+    max-width: 200px;
+    min-width: 200px;
+  }
+}

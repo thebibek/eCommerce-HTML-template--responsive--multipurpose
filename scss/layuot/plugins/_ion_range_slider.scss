@@ -1,0 +1,40 @@
+.irs {
+  .irs-line,
+  .irs-line span,
+  .irs-bar {
+    height: 2px;
+  }
+  .irs-from,
+  .irs-to,
+  .irs-single,
+  .irs-min,
+  .irs-max {
+    padding: 0;
+    @include screen-up(lg) {
+      top: 4px;
+    }
+    @include screen-down(lg) {
+      top: 2px;
+    }
+  }
+  .irs-from,
+  .irs-to,
+  .irs-single {
+    &::after {
+      display: none;
+    }
+  }
+  .irs-slider {
+    border-radius: 50%;
+    border: solid 1px transparent;
+    cursor: pointer;
+    @include screen-up(lg) {
+      @include size(10px);
+      top: 21px;
+    }
+    @include screen-down(lg) {
+      @include size(14px);
+      top: 19px;
+    }
+  }
+}

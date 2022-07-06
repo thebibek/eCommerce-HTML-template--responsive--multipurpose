@@ -1,0 +1,116 @@
+/*GLOBAL*/
+//palette
+$theme: #141414;
+$theme2: #ffffff;
+$theme3: #858585;
+$theme4: #F2F2F2;
+$theme5: #E5E5E5;
+$theme6: #BDBDBD;
+$theme7: #25A799;
+$theme8: #F54337;
+$theme9: #42A5F6;
+$theme10: #FF7143;
+$theme11: #F8DC68;
+$theme-transparent: #FFFFFA;
+$theme-custom: false;
+$theme-custom2: false;
+$theme-custom3: false;
+$theme-custom4: false;
+$theme-custom5: false;
+
+//body
+$theme-body: $theme2;
+
+//typography
+$theme-c: $theme3;
+$theme-paragraph-c: $theme-c;
+$theme-head-c: $theme;
+$theme-link-c: $theme;
+$theme-link-act-c: $theme;
+$theme-success: $theme7;
+$theme-error: $theme8;
+
+/*ELEMENTS & BLOCKS*/
+//inputs
+$input-bg: $theme2;
+$input-bd: $theme5;
+$input-c: $theme-c;
+$input-f-bg: $theme2;
+$input-f-bd: $theme;
+
+//buttons
+$button-bg: $theme2;
+$button-bd: $theme;
+$button-c: $theme;
+$button-h-bg: $theme;
+$button-h-bd: $theme;
+$button-h-c: $theme2;
+$button-act-bg: $button-h-bg;
+$button-act-bd: $button-h-bd;
+$button-act-c: $button-h-c;
+$button2-bg: $theme;
+$button2-bd: $theme2;
+$button2-c: $theme2;
+$button2-h-bg: $theme2;
+$button2-h-bd: $theme2;
+$button2-h-c: $theme;
+$button2-act-bg: $button2-h-bg;
+$button2-act-bd: $button2-h-bd;
+$button2-act-c: $button2-h-c;
+$button3-bg: $theme;
+$button3-bd: $theme;
+$button3-c: $theme2;
+$button3-h-bg: $theme2;
+$button3-h-bd: $theme;
+$button3-h-c: $theme;
+$button3-act-bg: $button3-h-bg;
+$button3-act-bd: $button3-h-bd;
+$button3-act-c: $button3-h-c;
+$button4-bg: $theme11;
+$button4-bd: $theme11;
+$button4-c: $theme;
+$button4-h-bg: $theme11;
+$button4-h-bd: $theme;
+$button4-h-c: $theme;
+$button4-act-bg: $theme11;
+$button4-act-bd: $theme;
+$button4-act-c: $theme;
+
+//labels
+$label-c: $theme2;
+$label-sale-bg: $theme8;
+$label-new-bg: $theme9;
+$label-hot-bg: $theme10;
+$label-out-stock-bg: $theme3;
+$label-in-stock-bg: $theme7;
+
+//header
+$header-tape-bg: $theme;
+$header-tape-c: $theme2;
+$header-tape-btn-close-c: $theme3;
+$header-top-line-bg: #141414;
+$header-bottom-line-bg: #141414;
+$header-m-bg: #141414;
+$header-d-bd: #3E3E3E;
+$header-m-bd: $theme5;
+$header-btns-d-c: #FFFFFF;
+$header-btn-search-d-c: #FFFFFF;
+$header-btns-d-h-c: $theme3;
+$header-btns-m-c: #FFFFFF;
+$header-menu-d-c: #FFFFFF;
+$header-menu-h-c: $theme3;
+
+//footer
+$footer-bg: #141414;
+$footer-bd: #3E3E3E;
+$footer-titles-c: #FFFFFF;
+$footer-links-h-c: #FFFFFF;
+$footer-icons-c: #FFFFFF;
+$footer-input-c: $input-c;
+$footer-input-bg: $footer-bg;
+$footer-input-bd: $footer-bd;
+$footer-input-f-bg: $footer-bg;
+$footer-input-f-bd: #FFFFFF;
+$footer-button-back-to-top-d-c: #BDBDBD;
+$footer-button-back-to-top-m-bg: #FFFFFF;
+$footer-button-back-to-top-m-c: #141414;

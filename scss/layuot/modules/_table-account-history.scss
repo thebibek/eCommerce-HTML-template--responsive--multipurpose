@@ -1,0 +1,21 @@
+.table-account-history {
+  th {
+    text-transform: uppercase;
+    border-top: none;
+  }
+  th,
+  td {
+    &:first-child {
+      padding-left: 0 !important;
+    }
+  }
+  td:first-child a {
+    text-decoration: underline;
+  }
+  &--page {
+    th:first-child {
+      width: 300px;
+      min-width: 160px;
+    }
+  }
+}

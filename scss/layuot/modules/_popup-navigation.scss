@@ -1,0 +1,17 @@
+.popup-navigation {
+  @include screen-down(lg) {
+    width: 270px;
+    max-width: 100%;
+  }
+  &__button {
+    &[data-js-popup-navigation-button='close'] > *:not([data-button-content='close']) {
+      display: none !important;
+    }
+    &[data-js-popup-navigation-button='back'] > *:not([data-button-content='back']),
+    &[data-js-popup-navigation-button='search'] > *:not([data-button-content='back']) {
+      @include screen-down(lg) {
+        display: none !important;
+      }
+    }
+  }
+}

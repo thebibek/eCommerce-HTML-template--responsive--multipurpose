@@ -1,0 +1,11 @@
+.social-media {
+  margin-bottom: -5px;
+  a {
+    @include screen-up(lg) {
+      transition-property: color;
+    }
+  }
+  i {
+    min-width: 17px;
+  }
+}

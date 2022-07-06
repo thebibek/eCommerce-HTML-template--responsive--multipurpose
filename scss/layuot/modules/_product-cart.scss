@@ -1,0 +1,12 @@
+.product-cart {
+  &__image {
+    width: 60px;
+    min-width: 60px;
+    img {
+      width: 100%;
+    }
+  }
+  &__price .price {
+    display: inline-block;
+  }
+}

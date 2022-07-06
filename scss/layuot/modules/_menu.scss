@@ -1,0 +1,244 @@
+.menu {
+  @include screen-down(lg) {
+    overflow-x: hidden;
+  }
+  .container,
+  .row {
+    @include screen-down(lg) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+  .container,
+  [class*='col'] {
+    @include screen-down(lg) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  .container {
+    @include screen-down(lg) {
+      max-width: 100%;
+    }
+  }
+  .row {
+    @include screen-down(lg) {
+      display: block;
+    }
+  }
+  &__item > a {
+    display: block;
+  }
+  [class*='col-'] {
+    @include screen-down(lg) {
+      position: static;
+      min-height: inherit;
+    }
+  }
+  &__level-02 {
+    @include screen-down(lg) {
+      left: 100%;
+    }
+  }
+  &__level-03 {
+    @include screen-down(lg) {
+      left: 200%;
+    }
+  }
+  &__back > a,
+  &__item--has-children > a {
+    @include screen-down(lg) {
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+  &__panel {
+    @include screen-up(lg) {
+      height: 100%;
+      margin-left: -7px;
+      margin-right: -7px;
+    }
+    @include screen-down(lg) {
+      position: relative;
+      min-height: 200px;
+      transform: none;
+      transition-property: transform;
+    }
+  }
+  &__panel &__list {
+    @include screen-down(lg) {
+      display: none !important;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 100%;
+    }
+    &.show {
+      @include screen-down(lg) {
+        display: block !important;
+      }
+    }
+  }
+  &__panel > &__item > a {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    @include screen-up(lg) {
+      height: 100%;
+    }
+  }
+  &__panel[data-mobile-level='2'] {
+    @include screen-down(lg) {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  &__panel[data-mobile-level='3'] {
+    @include screen-down(lg) {
+      transform: translate3d(-200%, 0, 0);
+    }
+  }
+  &__panel--bordered {
+    @include screen-up(lg) {
+      height: calc(100% + 1px);
+    }
+  }
+  &__panel--bordered > &__item > &__megamenu,
+  &__panel--bordered &__curtain {
+    @include screen-up(lg) {
+      top: calc(100% + 1px);
+    }
+    &::before {
+      @include screen-up(lg) {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        top: -1px;
+        left: 0;
+      }
+    }
+  }
+  &__megamenu,
+  &__curtain,
+  &__dropdown {
+    @include screen-up(lg) {
+      top: 100%;
+      left: 0;
+    }
+    &.show {
+      @include screen-up(lg) {
+        display: block !important;
+      }
+    }
+  }
+  &__megamenu,
+  &__curtain {
+    @include screen-up(lg) {
+      width: 100%;
+    }
+  }
+  &__megamenu {
+    @include screen-up(lg) {
+      overflow-y: auto;
+      opacity: 0;
+    }
+    &.animate {
+      @include screen-up(lg) {
+        will-change: opacity;
+        transition-property: opacity;
+      }
+    }
+    &.visible {
+      @include screen-up(lg) {
+        opacity: 1;
+      }
+    }
+  }
+  &__dropdown {
+    & > * {
+      @include screen-up(lg) {
+        opacity: 0;
+      }
+    }
+    &.animate > * {
+      @include screen-up(lg) {
+        will-change: opacity;
+        transition-property: opacity;
+      }
+    }
+    &.visible > * {
+      @include screen-up(lg) {
+        opacity: 1;
+      }
+    }
+  }
+  &__dropdown,
+  &__list--styled &__list {
+    @include screen-up(lg) {
+      width: 220px;
+      margin-left: -10px;
+    }
+  }
+  &__list--styled &__list {
+    @include screen-up(lg) {
+      left: calc(100% + 10px);
+      top: -15px;
+      z-index: 1;
+    }
+    &::before {
+      @include screen-up(lg) {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 10px;
+        height: 100%;
+        top: 0;
+        left: -10px;
+      }
+    }
+  }
+  &__list--styled {
+    @include screen-up(lg) {
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+    i {
+      @include screen-up(lg) {
+        margin-right: -5px;
+      }
+    }
+  }
+  &__list--styled &__item:not(:hover) > &__list {
+    @include screen-up(lg) {
+      display: none !important;
+    }
+  }
+  &__title {
+    @include screen-up(lg) {
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+  &__promobox {
+    @include screen-up(lg) {
+      margin-bottom: -30px;
+    }
+  }
+  &__products {
+    @include screen-up(lg) {
+      margin-bottom: -20px;
+    }
+  }
+  &__group {
+    @include screen-up(lg) {
+      margin-bottom: -30px;
+    }
+  }
+  &__group--offset-small {
+    @include screen-up(lg) {
+      margin-left: -5px;
+      margin-right: -5px;
+      margin-bottom: -10px;
+    }
+  }
+}

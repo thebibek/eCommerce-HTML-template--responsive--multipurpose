@@ -1,0 +1,85 @@
+<!doctype html>
+<!--[if IE 9]>
+<html class="ie9 no-js supports-no-cookies" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js supports-no-cookies" lang="en"> <!--<![endif]-->
+<head>
+    //= template/head.html
+</head>
+<body id="account" class="template-account theme-css-animate" data-currency-multiple="true">
+//= template/header.html
+<main id="MainContent">
+    <div class="breadcrumbs mt-15">
+        <div class="container">
+            <ul class="list-unstyled d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <li><a href="index.html">Home</a></li>
+                <li><span>Account</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="account mb-60">
+        <div class="container">
+            <h1 class="h3 mt-30 mb-40 text-center">My Account</h1>
+            <div class="tabs js-tabs" data-type="horizontal">
+                <div class="tabs__head" data-js-tabs-head>
+                    <div class="tabs__slider justify-content-lg-center" data-js-tabs-slider>
+                        <div class="tabs__btn" data-js-tabs-btn data-active="true">HISTORY</div>
+                        <div class="tabs__btn" data-js-tabs-btn>ACCOUNT DETAILS</div>
+                    </div>
+                    <div class="tabs__nav tabs__nav--prev" data-js-tabs-nav-prev><i>
+                        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-theme-006"
+                             viewBox="0 0 24 24">
+                            <path d="M16.736 3.417a.652.652 0 0 1-.176.449l-8.32 8.301 8.32 8.301c.117.13.176.28.176.449s-.059.319-.176.449a.91.91 0 0 1-.215.127c-.078.032-.156.049-.234.049s-.156-.017-.234-.049a.93.93 0 0 1-.215-.127l-8.75-8.75a.652.652 0 0 1-.176-.449c0-.169.059-.319.176-.449l8.75-8.75a.652.652 0 0 1 .449-.176c.169 0 .319.059.449.176.117.13.176.28.176.449z"/>
+                        </svg>
+                    </i></div>
+                    <div class="tabs__nav tabs__nav--next" data-js-tabs-nav-next><i>
+                        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-theme-007"
+                             viewBox="0 0 24 24">
+                            <path d="M6.708 20.917c0-.169.059-.319.176-.449l8.32-8.301-8.32-8.301a.652.652 0 0 1-.176-.449c0-.169.059-.319.176-.449a.65.65 0 0 1 .449-.176c.169 0 .318.059.449.176l8.75 8.75c.117.13.176.28.176.449a.652.652 0 0 1-.176.449l-8.75 8.75a.91.91 0 0 1-.215.127c-.078.032-.156.049-.234.049s-.156-.017-.234-.049a.91.91 0 0 1-.215-.127.652.652 0 0 1-.176-.449z"/>
+                        </svg>
+                    </i></div>
+                </div>
+                <div class="tabs__body">
+                    <div data-js-tabs-tab>
+                        <span data-js-tabs-btn-mobile>HISTORY <i><svg aria-hidden="true" focusable="false"
+                                                                      role="presentation" class="icon icon-theme-188"
+                                                                      viewBox="0 0 24 24"><path
+                                d="M7.158 12.206a.598.598 0 0 1-.186-.439.6.6 0 0 1 .186-.439.602.602 0 0 1 .439-.186h3.75v-3.75a.6.6 0 0 1 .186-.439.602.602 0 0 1 .439-.186c.169 0 .315.063.439.186a.605.605 0 0 1 .186.439v3.75h3.75c.169 0 .315.063.439.186a.605.605 0 0 1 .186.439.6.6 0 0 1-.186.439.601.601 0 0 1-.439.186h-3.75v3.75a.6.6 0 0 1-.186.439.601.601 0 0 1-.439.186.597.597 0 0 1-.439-.186.598.598 0 0 1-.186-.439v-3.75h-3.75a.598.598 0 0 1-.439-.186z"/></svg></i></span>
+                        <div class="tabs__content rte overflow-hidden" data-js-tabs-content>
+                            <h2 class="h4 mt-20 mb-30 text-center">Order History</h2>
+
+                            <p class="text-center">You haven&#39;t placed any orders yet.</p>
+                        </div>
+                    </div>
+                    <div data-js-tabs-tab>
+                        <span data-js-tabs-btn-mobile>ACCOUNT DETAILS <i><svg aria-hidden="true" focusable="false"
+                                                                              role="presentation"
+                                                                              class="icon icon-theme-188"
+                                                                              viewBox="0 0 24 24"><path
+                                d="M7.158 12.206a.598.598 0 0 1-.186-.439.6.6 0 0 1 .186-.439.602.602 0 0 1 .439-.186h3.75v-3.75a.6.6 0 0 1 .186-.439.602.602 0 0 1 .439-.186c.169 0 .315.063.439.186a.605.605 0 0 1 .186.439v3.75h3.75c.169 0 .315.063.439.186a.605.605 0 0 1 .186.439.6.6 0 0 1-.186.439.601.601 0 0 1-.439.186h-3.75v3.75a.6.6 0 0 1-.186.439.601.601 0 0 1-.439.186.597.597 0 0 1-.439-.186.598.598 0 0 1-.186-.439v-3.75h-3.75a.598.598 0 0 1-.439-.186z"/></svg></i></span>
+                        <div class="tabs__content rte overflow-hidden" data-js-tabs-content>
+                            <h2 class="h4 mt-20 mb-30 text-center">Account Details</h2>
+                            <p class="text-center">
+                                <a href="/account/addresses">View Addresses (0)</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                Loader.require({
+                    type: "script",
+                    name: "tabs"
+                });
+            </script>
+        </div>
+    </div>
+</main>
+//= template/footer.html
+//= template/popups.html
+//= template/footbar.html
+//= template/fixed-sidebar.html
+//= template/templates.html
+//= template/footer-includes.html
+</body>
+</html>

@@ -1,0 +1,10 @@
+.table-account-addresses {
+  tr:first-child td {
+    border-top: none !important;
+  }
+  td:first-child {
+    width: 160px;
+    padding-left: 0 !important;
+    text-transform: uppercase;
+  }
+}

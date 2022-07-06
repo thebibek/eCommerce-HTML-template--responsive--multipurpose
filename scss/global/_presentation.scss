@@ -1,0 +1,83 @@
+.presentation {
+  float: right;
+  width: 180px;
+  z-index: 99999;
+  background-color: $theme2;
+  transform: translate3d(100%, 0, 0);
+  @include shadow(0 0 20px 0 rgba(0, 0, 0, 0.15));
+  transition: $animation-css-duration transform, $animation-css-duration box-shadow;
+  will-change: transform, box-shadow;
+  &.open {
+    transform: none !important;
+  }
+}
+.presentation__btn {
+  width: 30px;
+  height: 30px;
+  background-color: $theme;
+  i {
+    position: absolute;
+    transition: $animation-css-duration transform;
+    will-change: transform;
+    .icon {
+      fill: $theme2;
+    }
+    &:first-child {
+      transform: scale3d(1, 1, 1);
+      .icon {
+        width: 24px;
+      }
+    }
+    &:last-child {
+      transform: scale3d(0, 0, 1);
+      .icon {
+        width: 16px;
+      }
+    }
+  }
+}
+.presentation.open .presentation__btn {
+  width: 30px;
+  height: 30px;
+  background-color: $theme;
+  i {
+    &:first-child {
+      transform: scale3d(0, 0, 1);
+    }
+    &:last-child {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+}
+.presentation__content {
+  a {
+    @include link-color($theme-c);
+    transition: $animation-css-duration color;
+    @include desktop-hover-color('color', $theme);
+  }
+  .input-boolean input ~ span,
+  .input-boolean input + span span {
+    transition-duration: $animation-css-duration;
+  }
+}
+.presentation__section {
+  & > label {
+    .input-boolean__label {
+      color: $theme-c;
+      transition: $animation-css-duration color;
+    }
+    &:hover .input-boolean__label ,
+    input:checked ~ .input-boolean__label {
+      color: $theme;
+    }
+  }
+}
+[dir="rtl"] {
+  .presentation {
+    float: left;
+    transform: translate3d(-100%, 0, 0);
+    &.close {
+      transform: translate3d(-100%, 0, 0) !important;
+    }
+  }
+}

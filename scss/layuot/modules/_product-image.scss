@@ -1,0 +1,115 @@
+.product-image {
+  img {
+    width: 100%;
+  }
+  &:not(.hovered-end) [data-js-tooltip] {
+    pointer-events: none;
+  }
+  &--hover-emersion-x,
+  &--hover-emersion-y,
+  &--hover-emersion-z {
+    @include screen-up(lg) {
+      overflow: hidden;
+    }
+  }
+  &--hover-fade &__overlay-top-right,
+  &--hover-fade &__overlay-bottom-right {
+    @include screen-up(lg) {
+      transition-property: opacity;
+      will-change: opacity;
+    }
+  }
+  &--hover-emersion-x &__overlay-top-right,
+  &--hover-emersion-x &__overlay-bottom-right,
+  &--hover-emersion-y &__overlay-top-right,
+  &--hover-emersion-y &__overlay-bottom-right,
+  &--hover-emersion-z &__overlay-top-right,
+  &--hover-emersion-z &__overlay-bottom-right,
+  &--hover-scale &__overlay-top-right,
+  &--hover-scale &__overlay-bottom-right {
+    @include screen-up(lg) {
+      transition-property: transform, opacity;
+      will-change: transform, opacity;
+    }
+  }
+  &--hover-toggle &__overlay-top-right,
+  &--hover-toggle &__overlay-bottom-right,
+  &--hover-fade &__overlay-top-right,
+  &--hover-fade &__overlay-bottom-right,
+  &--hover-emersion-x &__overlay-top-right,
+  &--hover-emersion-x &__overlay-bottom-right,
+  &--hover-emersion-y &__overlay-top-right,
+  &--hover-emersion-y &__overlay-bottom-right,
+  &--hover-emersion-z &__overlay-top-right,
+  &--hover-emersion-z &__overlay-bottom-right,
+  &--hover-scale &__overlay-top-right,
+  &--hover-scale &__overlay-bottom-right {
+    @include screen-up(lg) {
+      opacity: 0;
+    }
+  }
+  &--hover-emersion-x &__overlay-top-right,
+  &--hover-emersion-x &__overlay-bottom-right {
+    @include screen-up(lg) {
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+  &--hover-emersion-y &__overlay-top-right {
+    @include screen-up(lg) {
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+  &--hover-emersion-y &__overlay-bottom-right {
+    @include screen-up(lg) {
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+  &--hover-emersion-z &__overlay-top-right {
+    @include screen-up(lg) {
+      transform: translate3d(100%, -100%, 0);
+    }
+  }
+  &--hover-emersion-z &__overlay-bottom-right {
+    @include screen-up(lg) {
+      transform: translate3d(100%, 100%, 0);
+    }
+  }
+  &--hover-scale &__overlay-top-right,
+  &--hover-scale &__overlay-bottom-right {
+    @include screen-up(lg) {
+      transform: scale3d(0.6, 0.6, 1);
+    }
+  }
+  &--hover-toggle:hover &__overlay-top-right,
+  &--hover-toggle:hover &__overlay-bottom-right,
+  &--hover-fade:hover &__overlay-top-right,
+  &--hover-fade:hover &__overlay-bottom-right,
+  &--hover-emersion-x:hover &__overlay-top-right,
+  &--hover-emersion-x:hover &__overlay-bottom-right,
+  &--hover-emersion-y:hover &__overlay-top-right,
+  &--hover-emersion-y:hover &__overlay-bottom-right,
+  &--hover-emersion-z:hover &__overlay-top-right,
+  &--hover-emersion-z:hover &__overlay-bottom-right,
+  &--hover-scale:hover &__overlay-top-right,
+  &--hover-scale:hover &__overlay-bottom-right {
+    @include screen-up(lg) {
+      opacity: 1;
+    }
+  }
+  &--hover-emersion-x:hover &__overlay-top-right,
+  &--hover-emersion-x:hover &__overlay-bottom-right,
+  &--hover-emersion-y:hover &__overlay-top-right,
+  &--hover-emersion-y:hover &__overlay-bottom-right,
+  &--hover-emersion-z:hover &__overlay-top-right,
+  &--hover-emersion-z:hover &__overlay-bottom-right {
+    @include screen-up(lg) {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  &--hover-scale:hover &__overlay-top-right,
+  &--hover-scale:hover &__overlay-bottom-right {
+    @include screen-up(lg) {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+}

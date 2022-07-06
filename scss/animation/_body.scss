@@ -1,0 +1,158 @@
+body.theme-css-animate {
+  //with js
+  .menu__megamenu.animate,
+  .menu__dropdown.animate > * {
+    @media (min-width: $screen-lg-up) {
+      transition-duration: $animation-menu-desktop-duration;
+    }
+  }
+  .menu__panel {
+    @media (max-width: $screen-lg-down) {
+      transition-duration: $animation-menu-mobile-duration;
+    }
+  }
+  .dropdown.animate > * {
+    @media (min-width: $screen-lg-up) {
+      transition-duration: $animation-dropdown-duration;
+    }
+  }
+  .popup__bg.animate,
+  .popup__body.animate [data-popup-content] {
+    transition-duration: $animation-popup-duration;
+  }
+  .notification.animate {
+    transition-duration: $animation-notification-duration;
+  }
+  .notification.animate.pressed {
+    transition-duration: $animation-notification-duration/2;
+  }
+  .notification__inner.animate {
+    transition-duration: $animation-notification-duration;
+  }
+  .footbar-product.animate > * {
+    transition-duration: $animation-footbar-product-duration;
+  }
+  .faqs__cross {
+    transition-duration: $animation-accordion-duration;
+  }
+  .tabs[data-type="horizontal"] .tabs__body > div > span i {
+    @media (max-width: $screen-lg-down) {
+      transition-duration: $animation-tabs-duration;
+    }
+  }
+  .tabs[data-type="mobile"] .tabs__body > div > span i {
+    transition-duration: $animation-tabs-duration;
+  }
+  .footer__section-btn i {
+    @media (max-width: $screen-lg-down) {
+      transition-duration: $animation-accordion-duration;
+    }
+  }
+  //only css
+  .product-image--hover-fade,
+  .product-image--hover-emersion-x,
+  .product-image--hover-emersion-y,
+  .product-image--hover-emersion-z,
+  .product-image--hover-scale {
+    .product-image__overlay-top-right,
+    .product-image__overlay-bottom-right {
+      @media (min-width: $screen-lg-up) {
+        transition-duration: $animation-product-hover-duration;
+      }
+    }
+  }
+  .image-animation > *,
+  .promobox__border,
+  .promobox__plate--hovered,
+  .promobox__content-scale {
+    @media (min-width: $screen-lg-up) {
+      transition-duration: $animation-promobox-duration;
+    }
+  }
+  .rimage__img--fade-in,
+  .carousel__title a,
+  .product-fixed-sizebar,
+  .product-fixed-sizebar__line,
+  .slick-slide .promobox__content {
+    transition-duration: $animation-css-duration;
+  }
+  ul li > a,
+  ol li > a,
+  .btn-link,
+  .btn--animated .btn__icon,
+  .btn--animated .btn__text,
+  .input-checkbox span,
+  .spr-review-reportreview,
+  .instafeed__curtain,
+  .social-media a {
+    @media (min-width: $screen-lg-up) {
+      transition-duration: $animation-css-duration;
+    }
+  }
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  textarea,
+  select,
+  .input-boolean input ~ span,
+  .input-boolean input + span span,
+  .btn .icon,
+  .btn span,
+  .spr-summary-actions-newreview,
+  .input-quantity [data-control] {
+    transition-duration: $animation-css-low-duration;
+  }
+  .btn {
+    transition: background-color $animation-css-low-duration, border-color $animation-css-low-duration, color $animation-css-low-duration !important;
+  }
+  .shopify-payment-button__button {
+    @media (min-width: $screen-lg-up) {
+      transition: background-color $animation-css-low-duration, border-color $animation-css-low-duration, color $animation-css-low-duration !important;
+    }
+  }
+  .input-boolean input:checked + span {
+    transition-duration: $animation-css-low-duration * 2.5;
+  }
+  .header__btn-services,
+  .header__btn-services > i .icon,
+  .header__btn-account,
+  .header__btn-account > i .icon,
+  .header__btn-wishlist,
+  .header__btn-wishlist > i .icon,
+  .header__btn-compare,
+  .header__btn-compare > i .icon,
+  .header__btn-cart,
+  .header__btn-cart > i .icon,
+  .header__btn-currency,
+  .header__btn-currency > i .icon,
+  .header__btn-language,
+  .header__btn-language > i .icon,
+  .header__btn-search,
+  .header__btn-search > i .icon,
+  .header__content--sticky,
+  .product-collection__collections a,
+  .product-wishlist__collections a,
+  .product-compare__collections a,
+  .product-page-info__collections a,
+  .product-featured__collections a,
+  .product-images-navigation span  .icon,
+  .spr-summary-actions-newreview,
+  .product-images-navigation span,
+  .sorting-collections__head a,
+  .gallery__item-layer,
+  .gallery__fotorama .fotorama__nav__frame--thumb,
+  .carousel-brands a,
+  .carousel__prev,
+  .carousel__next,
+  .lookbook__picker-circle::before,
+  .slider-revolution__spacer,
+  .notification-cookies__bg,
+  .slider .slick-dots li {
+    @media (min-width: $screen-lg-up) {
+      transition-duration: $animation-css-low-duration;
+    }
+  }
+}

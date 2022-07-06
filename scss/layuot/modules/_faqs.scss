@@ -1,0 +1,7 @@
+.faqs__cross {
+  transition-property: transform;
+  will-change: transform;
+}
+.faqs__head:not(.open) .faqs__cross {
+  transform: rotate(45deg);
+}

@@ -1,0 +1,13 @@
+.product-compare {
+  &__buttons {
+    @include screen-down(lg) {
+      overflow: hidden;
+    }
+  }
+  &__buttons-section {
+    @include screen-down(lg) {
+      margin-left: -13px;
+      margin-right: -13px;
+    }
+  }
+}

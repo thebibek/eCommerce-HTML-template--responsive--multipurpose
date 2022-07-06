@@ -1,0 +1,38 @@
+.product-fixed-sizebar {
+  width: 270px;
+  transition-property: transform, box-shadow;
+  will-change: transform, box-shadow;
+  @include screen-up(lg) {
+    transform: translate3d(calc(100% - 40px), 0, 0);
+  }
+  @include screen-down(lg) {
+    transform: translate3d(100%, 0, 0);
+  }
+  &:hover {
+    transform: none !important;
+  }
+  &__btn {
+    @include size(20px);
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 10px;
+      height: 100%;
+      right: -10px;
+    }
+  }
+  &:hover &__btn i {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+  &__line {
+    &:not(:first-child) {
+      border-top: solid 1px transparent;
+      transition-property: border-color;
+    }
+    i {
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+}

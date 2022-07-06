@@ -1,0 +1,187 @@
+html {
+  padding-bottom: 0 !important;
+}
+body {
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+#MainContent {
+  position: relative;
+  z-index: 1;
+}
+h1, .h1 {
+  margin-bottom: 33px;
+}
+h2, .h2 {
+  margin-bottom: 45px;
+}
+h3, .h3 {
+  margin-bottom: 24px;
+}
+h4, .h4 {
+  margin-bottom: 28px;
+}
+h5, .h5 {
+  margin-bottom: 25px;
+}
+h6, .h6 {
+  margin-bottom: 26px;
+}
+img {
+  max-width: 100%;
+  image-rendering: auto;
+}
+p {
+  margin-bottom: 20px;
+}
+a {
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+  &:hover,
+  &:visited,
+  &:active,
+  &:link {
+    text-decoration: none;
+  }
+}
+a, img {
+  &:focus {
+    outline: 0;
+  }
+}
+label {
+  display: inline-block;
+  margin-bottom: 7px;
+}
+hr {
+  display: block;
+  height: 1px;
+  padding: 0;
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid transparent;
+}
+blockquote {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  border-left: solid 2px transparent;
+  font-style: italic;
+  p {
+    margin-bottom: 0 !important;
+  }
+  span {
+    display: block;
+    margin-top: 15px;
+    font-style: normal;
+  }
+}
+
+//list
+ul, ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  li > a {
+    @include screen-up(lg) {
+      transition-property: color;
+    }
+  }
+}
+ul:not(.list-unstyled) {
+  li {
+    padding-left: 16px;
+    &::before {
+      display: inline-block;
+      content: '';
+      margin-bottom: 2px;
+      margin-right: 10px;
+      margin-left: -16px;
+      border-radius: 50%;
+      @include size(4px);
+    }
+  }
+  ul {
+    padding-left: 18px;
+  }
+}
+ol:not(.list-unstyled) {
+  counter-reset: list1;
+  li {
+    padding-left: 16px;
+    &::before {
+      margin-left: -16px;
+      counter-increment: list1;
+      content: counter(list1) ". ";
+    }
+  }
+  ol {
+    padding-left: 36px;
+    counter-reset: list2;
+    li::before {
+      counter-increment: list2;
+      content: counter(list1) "@mixin " counter(list2) ". ";
+    }
+  }
+}
+video {
+  display: block;
+}
+
+//container
+.container--sm {
+  @include screen-up(lg) {
+    max-width: 800px;
+  }
+  &.px-0 {
+    @include screen-up(lg) {
+      max-width: 770px;
+    }
+  }
+}
+
+//table
+.table, .responsive-table {
+  text-align: left;
+  border-collapse: collapse;
+  th {
+    border-bottom: none !important;
+  }
+  th, td {
+    height: 34px;
+    padding: 8px 15px !important;
+    vertical-align: middle !important;
+  }
+}
+.table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.table-center {
+  th:not(:first-child),
+  td:not(:first-child) {
+    text-align: center;
+  }
+}
+
+//rte
+.rte {
+  img {
+    @include screen-down(sm) {
+      width: 100%;
+    }
+  }
+  blockquote {
+    margin-bottom: 40px;
+  }
+}
+
+#preview-bar-iframe,
+#admin-bar-iframe {
+  display: none !important;
+}

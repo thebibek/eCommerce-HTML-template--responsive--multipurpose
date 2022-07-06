@@ -1,0 +1,21 @@
+.tippy-tooltip.shella-theme {
+  font-style: italic;
+  border-radius: 0;
+  height: 15px;
+  padding: 0 6px 0 4px;
+ }
+.tippy-tooltip.shella-theme .tippy-arrow {
+  border-width: 3px;
+}
+.tippy-popper[x-placement^='top'] .tippy-tooltip.shella-theme .tippy-arrow {
+  bottom: -3px;
+}
+.tippy-popper[x-placement^='bottom'] .tippy-tooltip.shella-theme .tippy-arrow {
+  top: -3px;
+}
+.tippy-popper[x-placement^='left'] .tippy-tooltip.shella-theme .tippy-arrow {
+  right: -3px;
+}
+.tippy-popper[x-placement^='right'] .tippy-tooltip.shella-theme .tippy-arrow {
+  left: -3px;
+}

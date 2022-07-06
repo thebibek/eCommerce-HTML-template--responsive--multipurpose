@@ -1,0 +1,8 @@
+.carousel-articles {
+  &__image {
+    @include screen-up(xl) {
+      width: 270px !important;
+      min-width: 270px;
+    }
+  }
+}

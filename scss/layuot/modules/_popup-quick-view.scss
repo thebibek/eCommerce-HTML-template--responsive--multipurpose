@@ -1,0 +1,9 @@
+.popup-quick-view {
+  width: 1200px;
+  max-width: 100%;
+  &__close {
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+  }
+}

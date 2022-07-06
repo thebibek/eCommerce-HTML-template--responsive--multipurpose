@@ -1,0 +1,38 @@
+.article {
+  ul, ol {
+    margin-left: 40px;
+    margin-bottom: 30px;
+  }
+  blockquote {
+    padding-left: 30px;
+    margin-left: 40px;
+  }
+  &__body--max-width {
+    @include screen-up(xl) {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__body--with-sidebar {
+    @include screen-up(xl) {
+      max-width: 60%;
+    }
+  }
+  &__sidebar--width-md {
+    @include screen-up(xl) {
+      width: 400px;
+    }
+    @include screen-between(lg, xl) {
+      width: 332px;
+    }
+  }
+}
+.article__sidebar.article__sidebar--offset-bottom {
+  @include screen-up(lg) {
+    margin-bottom: -25px;
+  }
+}
+.article-text {
+  margin-bottom: 40px;
+}

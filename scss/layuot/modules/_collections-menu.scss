@@ -1,0 +1,5 @@
+.collections-menu {
+  &__button.open &__arrow {
+    transform: rotate(-180deg);
+  }
+}

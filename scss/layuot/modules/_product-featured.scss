@@ -1,0 +1,9 @@
+.product-featured {
+  &__image {
+    width: 100px;
+    min-width: 100px;
+    img {
+      width: 100%;
+    }
+  }
+}

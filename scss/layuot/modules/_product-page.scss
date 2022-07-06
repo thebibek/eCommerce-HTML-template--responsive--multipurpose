@@ -1,0 +1,23 @@
+.product-page {
+  &__container--with-sidebar {
+    @include screen-up(xl) {
+      width: calc(100% - 370px);
+    }
+  }
+  &__sidebar {
+    @include screen-up(xl) {
+      width: 340px;
+      min-width: 340px;
+    }
+  }
+  &__sidebar--left {
+    @include screen-up(xl) {
+      border-right: solid 1px;
+    }
+  }
+  &__sidebar--right {
+    @include screen-up(xl) {
+      border-left: solid 1px transparent;
+    }
+  }
+}

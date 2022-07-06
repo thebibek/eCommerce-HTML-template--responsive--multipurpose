@@ -1,0 +1,12 @@
+.cart {
+  &__image {
+    @include screen-up(sm) {
+      width: 100%;
+      max-width: 150px;
+    }
+    @include screen-down(sm) {
+      width: 40%;
+      min-width: 40%;
+    }
+  }
+}
